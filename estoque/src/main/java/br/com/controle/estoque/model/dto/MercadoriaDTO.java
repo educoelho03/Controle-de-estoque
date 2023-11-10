@@ -6,7 +6,6 @@ import jakarta.persistence.Entity;
 import lombok.*;
 
 @Getter
-@Setter
 @Entity
 @NoArgsConstructor(force = true)
 public record MercadoriaDTO(
