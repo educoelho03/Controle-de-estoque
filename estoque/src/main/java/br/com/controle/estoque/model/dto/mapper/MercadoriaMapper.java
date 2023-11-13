@@ -13,7 +13,7 @@ public class MercadoriaMapper {
                 mercadoria.getName(),
                 mercadoria.getDescription(),
                 mercadoria.getAmount(),
-                mercadoria.getType(),
+                mercadoria.getInOut(),
                 mercadoria.getStockPrice());
     }
 
@@ -27,7 +27,7 @@ public class MercadoriaMapper {
         mercadoria.setName(mercadoriaDTO.getName());
         mercadoria.setDescription(mercadoriaDTO.getDescription());
         mercadoria.setAmount(mercadoria.getAmount());
-        mercadoria.setType(mercadoria.getType());
+        mercadoria.setInOut(mercadoria.getInOut());
 
         return mercadoria;
 

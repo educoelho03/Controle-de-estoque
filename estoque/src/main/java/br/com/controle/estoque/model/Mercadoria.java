@@ -1,5 +1,6 @@
 package br.com.controle.estoque.model;
 
+import br.com.controle.estoque.model.enums.InOutEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -25,7 +26,8 @@ public class Mercadoria {
     private Integer amount; //quantidade
 
     @NotBlank
-    private InOutEnum type;
+    @Enumerated(EnumType.STRING)
+    private InOutEnum inOut;
 
     @NotBlank
     private Double stockPrice;

@@ -43,7 +43,7 @@ public class EstoqueService {
                 recordFound -> {
                     recordFound.setName(mercadoria.getName());
                     recordFound.setDescription(mercadoria.getDescription());
-                    recordFound.setType(mercadoria.getType());
+                    recordFound.setInOut(mercadoria.getInOut());
                     return estoqueRepository.save(recordFound);
                 }).map(mercadoriaMapper::convertToDTO).orElseThrow(() -> new RecordNotFoundException(id));
     }

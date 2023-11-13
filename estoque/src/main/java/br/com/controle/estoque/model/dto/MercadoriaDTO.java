@@ -1,6 +1,6 @@
 package br.com.controle.estoque.model.dto;
 
-import br.com.controle.estoque.model.InOutEnum;
+import br.com.controle.estoque.model.enums.InOutEnum;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import lombok.*;
