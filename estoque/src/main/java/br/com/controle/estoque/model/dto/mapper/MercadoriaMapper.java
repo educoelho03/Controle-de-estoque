@@ -1,4 +1,4 @@
-package br.com.controle.estoque.model.mapper;
+package br.com.controle.estoque.model.dto.mapper;
 
 import br.com.controle.estoque.model.Mercadoria;
 import br.com.controle.estoque.model.dto.MercadoriaDTO;
@@ -24,7 +24,7 @@ public class MercadoriaMapper {
 
         Mercadoria mercadoria = new Mercadoria();
 
-        mercadoria.setName(mercadoriaDTO.name());
+        mercadoria.setName(mercadoriaDTO.getName());
         mercadoria.setDescription(mercadoriaDTO.getDescription());
         mercadoria.setAmount(mercadoria.getAmount());
         mercadoria.setType(mercadoria.getType());

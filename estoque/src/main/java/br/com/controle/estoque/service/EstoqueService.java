@@ -1,14 +1,15 @@
 package br.com.controle.estoque.service;
 
+import br.com.controle.estoque.exceptionHandler.RecordNotFoundException;
 import br.com.controle.estoque.model.Mercadoria;
 import br.com.controle.estoque.model.dto.MercadoriaDTO;
-import br.com.controle.estoque.model.mapper.MercadoriaMapper;
+import br.com.controle.estoque.model.dto.mapper.MercadoriaMapper;
 import br.com.controle.estoque.repository.EstoqueRepository;
-import org.modelmapper.ModelMapper;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -23,17 +24,28 @@ public class EstoqueService {
     }
 
     public List<MercadoriaDTO> findAll(){
-        return estoqueRepository.findAll().stream().map(mercadoriaMapper::convertToDTO).collect(Collectors.toList());
+        return estoqueRepository.findAll()
+                .stream()
+                .map(mercadoriaMapper::convertToDTO)
+                .collect(Collectors.toList());
     }
 
-    public MercadoriaDTO registerMercadoria(Mercadoria mercadoria){
+    public MercadoriaDTO createMercadoria (@Valid Mercadoria mercadoria){
         return mercadoriaMapper.convertToDTO(estoqueRepository.save(mercadoria));
     }
 
+    public MercadoriaDTO findMercadoriaById(@PathVariable Long id) throws RecordNotFoundException {
+        return estoqueRepository.findById(id).map(mercadoriaMapper::convertToDTO).orElseThrow(() -> new RecordNotFoundException(id));
+    }
 
-    // todo: Adicionar uma exception personalizada para o Record, "RecordNotFoundException"
-    public MercadoriaDTO findMercadoriaById(Long id){
-        return estoqueRepository.findById(id).map(mercadoriaMapper::convertToDTO).orElseThrow(RuntimeException::new);
+    public MercadoriaDTO update(Long id, Mercadoria mercadoria) throws RecordNotFoundException {
+        return estoqueRepository.findById(id).map(
+                recordFound -> {
+                    recordFound.setName(mercadoria.getName());
+                    recordFound.setDescription(mercadoria.getDescription());
+                    recordFound.setType(mercadoria.getType());
+                    return estoqueRepository.save(recordFound);
+                }).map(mercadoriaMapper::convertToDTO).orElseThrow(() -> new RecordNotFoundException(id));
     }
 
 }
