@@ -1,6 +1,6 @@
-package br.com.controle.estoque.model;
+package br.com.controle.estoque.domain.entity;
 
-import br.com.controle.estoque.model.enums.InOutEnum;
+import br.com.controle.estoque.domain.enums.InOutEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

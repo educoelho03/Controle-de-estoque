@@ -1,4 +1,4 @@
-package br.com.controle.estoque.model.enums;
+package br.com.controle.estoque.domain.enums;
 
 public enum InOutEnum {
     ENTER("Entrada"),

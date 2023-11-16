@@ -1,12 +1,12 @@
-package br.com.controle.estoque.model.dto.mapper;
+package br.com.controle.estoque.domain.mapper;
 
-import br.com.controle.estoque.model.Mercadoria;
-import br.com.controle.estoque.model.dto.MercadoriaDTO;
+import br.com.controle.estoque.domain.entity.Mercadoria;
+import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import org.springframework.stereotype.Component;
 
 @Component
 // TODO: USAR A DEPENDENCIA MODELMAPPER?
-public class MercadoriaMapper {
+public class MercadoriaEntityMapper {
 
     public MercadoriaDTO convertToDTO(Mercadoria mercadoria){
         return new MercadoriaDTO(
