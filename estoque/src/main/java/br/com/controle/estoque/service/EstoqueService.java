@@ -48,4 +48,14 @@ public class EstoqueService {
                 }).map(mercadoriaMapper::convertToDTO).orElseThrow(() -> new RecordNotFoundException(id));
     }
 
+    public void deleteMercadoriaById(Long id){
+        try {
+            if(estoqueRepository.findById(id).isPresent()){
+                estoqueRepository.deleteById(id);
+            }
+        } catch (Exception e){
+            throw new IllegalArgumentException(e);
+        }
+        estoqueRepository.deleteById(id);
+    }
 }

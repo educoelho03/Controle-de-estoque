@@ -40,4 +40,8 @@ public class EstoqueController {
         return new ResponseEntity<>(estoqueService.update(id, mercadoria), HttpStatus.ACCEPTED);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteMercadoriaById(@PathVariable Long id){
+        estoqueService.deleteMercadoriaById(id);
+    }
 }
