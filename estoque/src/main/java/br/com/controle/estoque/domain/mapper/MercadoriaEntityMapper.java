@@ -24,7 +24,7 @@ public class MercadoriaEntityMapper {
                 mercadoria.getName(),
                 mercadoria.getDescription(),
                 mercadoria.getAmount(),
-                mercadoria.getInOut(),
+                mercadoria.getType(),
                 mercadoria.getStockPrice()
         );
     }

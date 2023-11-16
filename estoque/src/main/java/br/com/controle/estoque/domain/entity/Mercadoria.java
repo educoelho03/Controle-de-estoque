@@ -1,11 +1,10 @@
 package br.com.controle.estoque.domain.entity;
 
+import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.enums.InOutEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity(name = "mercadorias")
@@ -29,18 +28,26 @@ public class Mercadoria {
 
     @NotBlank
     @Enumerated(EnumType.STRING)
-    private InOutEnum inOut;
+    private InOutEnum type;
 
     @NotBlank
     private Double stockPrice;
 
 
-    public Mercadoria(String name, String description, Integer amount, InOutEnum inOut, Double stockPrice){
+    public Mercadoria(String name, String description, Integer amount, InOutEnum type, Double stockPrice){
         this.name = name;
         this.description = description;
         this.amount = amount;
-        this.inOut = inOut;
+        this.type = type;
         this.stockPrice = stockPrice;
     }
+
+//    public Mercadoria(MercadoriaDTO mercadoriaDTO){
+//        this.name = mercadoriaDTO.getName();
+//        this.description = mercadoriaDTO.getDescription();
+//        this.amount = mercadoriaDTO.getAmount();
+//        this.type = mercadoriaDTO.getType();
+//        this.stockPrice = mercadoriaDTO.getStockPrice();
+//    }
 
 }
