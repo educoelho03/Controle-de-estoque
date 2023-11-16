@@ -8,11 +8,9 @@ import org.springframework.stereotype.Service;
 public class DeleteByIdMercadoriaInteractor {
 
     private final EstoqueRepository estoqueRepository;
-    private final MercadoriaEntityMapper mercadoriaEntityMapper;
 
-    public DeleteByIdMercadoriaInteractor(EstoqueRepository estoqueRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
+    public DeleteByIdMercadoriaInteractor(EstoqueRepository estoqueRepository) {
         this.estoqueRepository = estoqueRepository;
-        this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
     public boolean deleteMercadoriaById(Long id){

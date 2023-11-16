@@ -17,21 +17,18 @@ import java.util.List;
 public class MercadoriaController {
 
     // TODO: AO USAR O USE CASE, EU VOU TER VARIOS CONSTRUTORES ASSIM MESMO? OU PRECISO CRIAR VARIOS CONTROLLERS, CADA UM EXECUTANDO UMA COISA?
-    private final RegisterMercadoriaInteractor registerMercadoriaInteractor;
     private final FindAllMercadoriaInteractor findAllMercadoriaInteractor;
     private final DeleteByIdMercadoriaInteractor deleteByIdMercadoriaInteractor;
 
-    public MercadoriaController(RegisterMercadoriaInteractor registerMercadoriaInteractor,
-                                FindAllMercadoriaInteractor findAllMercadoriaInteractor,
+    public MercadoriaController(FindAllMercadoriaInteractor findAllMercadoriaInteractor,
                                 DeleteByIdMercadoriaInteractor deleteByIdMercadoriaInteractor) {
 
-        this.registerMercadoriaInteractor = registerMercadoriaInteractor;
         this.findAllMercadoriaInteractor = findAllMercadoriaInteractor;
         this.deleteByIdMercadoriaInteractor = deleteByIdMercadoriaInteractor;
     }
 
     // TODO: IMPLEMENTAR TODAS OS USECASES CERTINHO
-    @GetMapping()
+    @GetMapping("/mercadorias")
     public ResponseEntity<List<MercadoriaDTO>> getAllMercadorias(){
         return new ResponseEntity<>(findAllMercadoriaInteractor.findAll(), HttpStatus.ACCEPTED);
     }
@@ -41,7 +38,7 @@ public class MercadoriaController {
         return new ResponseEntity<>(estoqueService.findMercadoriaById(id), HttpStatus.ACCEPTED);
     }
 
-    @PostMapping
+    @PostMapping("/mercadorias/registrar")
     public ResponseEntity<MercadoriaDTO> create(Mercadoria mercadoria){
         return new ResponseEntity<>(registerMercadoria.registerMercadoria(mercadoria), HttpStatus.CREATED);
     }

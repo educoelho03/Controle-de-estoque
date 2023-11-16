@@ -25,6 +25,6 @@ public class UpdateMercadoriaInteractor {
                     recordFound.setDescription(mercadoria.getDescription());
                     recordFound.setInOut(mercadoria.getInOut());
                     return estoqueRepository.save(recordFound);
-                }).map(mercadoriaEntityMapper::convertToDTO).orElseThrow(() -> new RecordNotFoundException(id));
+                }).map(mercadoriaEntityMapper::toDTO).orElseThrow(() -> new RecordNotFoundException(id));
     }
 }

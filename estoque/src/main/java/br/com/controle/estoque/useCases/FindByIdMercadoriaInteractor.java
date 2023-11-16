@@ -20,6 +20,6 @@ public class FindByIdMercadoriaInteractor {
     }
 
     public MercadoriaDTO findMercadoriaById(@PathVariable Long id) throws RecordNotFoundException {
-        return estoqueRepository.findById(id).map(mercadoriaEntityMapper::convertToDTO).orElseThrow(() -> new RecordNotFoundException(id));
+        return estoqueRepository.findById(id).map(mercadoriaEntityMapper::toDTO).orElseThrow(() -> new RecordNotFoundException(id));
     }
 }

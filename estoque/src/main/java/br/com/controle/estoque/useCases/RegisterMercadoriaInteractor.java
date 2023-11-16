@@ -19,7 +19,7 @@ public class RegisterMercadoriaInteractor {
     }
 
     public MercadoriaDTO registerMercadoria (@Valid Mercadoria mercadoria){
-        return mercadoriaEntityMapper.convertToDTO(estoqueRepository.save(mercadoria));
+        return mercadoriaEntityMapper.toDTO(estoqueRepository.save(mercadoria));
     }
 
 
