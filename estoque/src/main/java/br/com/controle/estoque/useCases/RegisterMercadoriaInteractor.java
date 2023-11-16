@@ -1,6 +1,6 @@
 package br.com.controle.estoque.useCases;
 
-import br.com.controle.estoque.domain.entity.Mercadoria;
+import br.com.controle.estoque.domain.entity.MercadoriaEntity;
 import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.mapper.MercadoriaEntityMapper;
 import br.com.controle.estoque.repository.EstoqueRepository;
@@ -18,8 +18,8 @@ public class RegisterMercadoriaInteractor {
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
-    public MercadoriaDTO registerMercadoria (@Valid Mercadoria mercadoria){
-        return mercadoriaEntityMapper.toDTO(estoqueRepository.save(mercadoria));
+    public MercadoriaDTO registerMercadoria (@Valid MercadoriaEntity mercadoriaEntity){
+        return mercadoriaEntityMapper.toDTO(estoqueRepository.save(mercadoriaEntity));
     }
 
 

@@ -1,6 +1,5 @@
 package br.com.controle.estoque.domain.entity;
 
-import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.enums.InOutEnum;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -11,7 +10,7 @@ import lombok.Setter;
 @Table(name = "tb_mercadoria")
 @Getter
 @Setter
-public class Mercadoria {
+public class MercadoriaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +33,7 @@ public class Mercadoria {
     private Double stockPrice;
 
 
-    public Mercadoria(String name, String description, Integer amount, InOutEnum type, Double stockPrice){
+    public MercadoriaEntity(String name, String description, Integer amount, InOutEnum type, Double stockPrice){
         this.name = name;
         this.description = description;
         this.amount = amount;

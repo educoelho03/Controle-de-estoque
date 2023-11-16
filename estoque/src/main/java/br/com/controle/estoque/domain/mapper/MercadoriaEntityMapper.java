@@ -1,6 +1,6 @@
 package br.com.controle.estoque.domain.mapper;
 
-import br.com.controle.estoque.domain.entity.Mercadoria;
+import br.com.controle.estoque.domain.entity.MercadoriaEntity;
 import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import org.springframework.stereotype.Component;
 
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 // TODO: USAR A DEPENDENCIA MODELMAPPER?
 public class MercadoriaEntityMapper {
 
-    public Mercadoria ToEntity(MercadoriaDTO mercadoriaDTO){
-        return new Mercadoria(
+    public MercadoriaEntity ToEntity(MercadoriaDTO mercadoriaDTO){
+        return new MercadoriaEntity(
                 mercadoriaDTO.name(),
                 mercadoriaDTO.description(),
                 mercadoriaDTO.amount(),
@@ -19,13 +19,13 @@ public class MercadoriaEntityMapper {
 
     }
 
-    public MercadoriaDTO toDTO(Mercadoria mercadoria){
+    public MercadoriaDTO toDTO(MercadoriaEntity mercadoriaEntity){
         return new MercadoriaDTO(
-                mercadoria.getName(),
-                mercadoria.getDescription(),
-                mercadoria.getAmount(),
-                mercadoria.getType(),
-                mercadoria.getStockPrice()
+                mercadoriaEntity.getName(),
+                mercadoriaEntity.getDescription(),
+                mercadoriaEntity.getAmount(),
+                mercadoriaEntity.getType(),
+                mercadoriaEntity.getStockPrice()
         );
     }
 }

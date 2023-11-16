@@ -1,7 +1,7 @@
 package br.com.controle.estoque.useCases;
 
 import br.com.controle.estoque.domain.dto.MercadoriaDTO;
-import br.com.controle.estoque.domain.entity.Mercadoria;
+import br.com.controle.estoque.domain.entity.MercadoriaEntity;
 import br.com.controle.estoque.domain.mapper.MercadoriaEntityMapper;
 import br.com.controle.estoque.exceptionHandler.RecordNotFoundException;
 import br.com.controle.estoque.repository.EstoqueRepository;
@@ -18,12 +18,12 @@ public class UpdateMercadoriaInteractor {
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
-    public MercadoriaDTO update(Long id, Mercadoria mercadoria) throws RecordNotFoundException {
+    public MercadoriaDTO update(Long id, MercadoriaEntity mercadoriaEntity) throws RecordNotFoundException {
         return estoqueRepository.findById(id).map(
                 recordFound -> {
-                    recordFound.setName(mercadoria.getName());
-                    recordFound.setDescription(mercadoria.getDescription());
-                    recordFound.setType(mercadoria.getType());
+                    recordFound.setName(mercadoriaEntity.getName());
+                    recordFound.setDescription(mercadoriaEntity.getDescription());
+                    recordFound.setType(mercadoriaEntity.getType());
                     return estoqueRepository.save(recordFound);
                 }).map(mercadoriaEntityMapper::toDTO).orElseThrow(() -> new RecordNotFoundException(id));
     }

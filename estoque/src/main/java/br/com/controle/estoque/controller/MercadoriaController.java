@@ -1,11 +1,10 @@
 package br.com.controle.estoque.controller;
 
 import br.com.controle.estoque.exceptionHandler.RecordNotFoundException;
-import br.com.controle.estoque.domain.entity.Mercadoria;
+import br.com.controle.estoque.domain.entity.MercadoriaEntity;
 import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.useCases.DeleteByIdMercadoriaInteractor;
 import br.com.controle.estoque.useCases.FindAllMercadoriaInteractor;
-import br.com.controle.estoque.useCases.RegisterMercadoriaInteractor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,13 +38,13 @@ public class MercadoriaController {
     }
 
     @PostMapping("/mercadorias/registrar")
-    public ResponseEntity<MercadoriaDTO> create(Mercadoria mercadoria){
-        return new ResponseEntity<>(registerMercadoria.registerMercadoria(mercadoria), HttpStatus.CREATED);
+    public ResponseEntity<MercadoriaDTO> create(MercadoriaEntity mercadoriaEntity){
+        return new ResponseEntity<>(registerMercadoria.registerMercadoria(mercadoriaEntity), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MercadoriaDTO> update(@PathVariable Long id, Mercadoria mercadoria){
-        return new ResponseEntity<>(estoqueService.update(id, mercadoria), HttpStatus.ACCEPTED);
+    public ResponseEntity<MercadoriaDTO> update(@PathVariable Long id, MercadoriaEntity mercadoriaEntity){
+        return new ResponseEntity<>(estoqueService.update(id, mercadoriaEntity), HttpStatus.ACCEPTED);
     }
 
     @DeleteMapping("/{id}")
