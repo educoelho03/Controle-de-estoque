@@ -13,7 +13,7 @@ public class RegisterMercadoriaInteractor {
     private EstoqueRepository estoqueRepository;
     private MercadoriaEntityMapper mercadoriaEntityMapper;
 
-    public RegisterMercadoria(EstoqueRepository estoqueRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
+    public RegisterMercadoriaInteractor(EstoqueRepository estoqueRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
         this.estoqueRepository = estoqueRepository;
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
