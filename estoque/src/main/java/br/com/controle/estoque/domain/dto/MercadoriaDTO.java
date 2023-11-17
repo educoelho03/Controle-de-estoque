@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public record MercadoriaDTO(
         @JsonProperty("name")
         @NotBlank(message = "Name is required")
-        String name,// Adicionar anotações de validação
+        String name,
 
         @JsonProperty("date")
         @NotNull(message = "Date is required")
