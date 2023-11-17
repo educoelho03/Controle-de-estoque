@@ -27,34 +27,34 @@ public class MercadoriaController {
         this.deleteByIdMercadoriaInteractor = deleteByIdMercadoriaInteractor;
     }
 
-    // TODO: IMPLEMENTAR TODAS OS USECASES CERTINHO
-    @GetMapping("/mercadorias")
-    public ResponseEntity<List<MercadoriaDTO>> getAllMercadorias(){
-        return new ResponseEntity<>(findAllMercadoriaInteractor.findAll(), HttpStatus.ACCEPTED);
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<MercadoriaDTO> getMercadoriaById(@PathVariable @Valid Long id) throws RecordNotFoundException {
-        return new ResponseEntity<>(estoqueService.findMercadoriaById(id), HttpStatus.ACCEPTED);
-    }
-
-    @PostMapping("/mercadorias/registrar")
-    public ResponseEntity<MercadoriaDTO> create(@Valid MercadoriaEntity mercadoriaEntity){
-        return new ResponseEntity<>(registerMercadoria.registerMercadoria(mercadoriaEntity), HttpStatus.CREATED);
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<MercadoriaDTO> update(@PathVariable @Valid Long id, @Valid MercadoriaEntity mercadoriaEntity){
-        return new ResponseEntity<>(estoqueService.update(id, mercadoriaEntity), HttpStatus.ACCEPTED);
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteMercadoriaById(@PathVariable @Valid Long id){
-        boolean deleted = deleteByIdMercadoriaInteractor.deleteMercadoriaById(id);
-        if (deleted){
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
+//    // TODO: IMPLEMENTAR TODAS OS USECASES CERTINHO
+////    @GetMapping("/mercadorias")
+////    public ResponseEntity<List<MercadoriaDTO>> getAllMercadorias(){
+////        return new ResponseEntity<>(findAllMercadoriaInteractor.findAll(), HttpStatus.ACCEPTED);
+////    }
+////
+////    @GetMapping("/{id}")
+////    public ResponseEntity<MercadoriaDTO> getMercadoriaById(@PathVariable @Valid Long id) throws RecordNotFoundException {
+////        return new ResponseEntity<>(estoqueService.findMercadoriaById(id), HttpStatus.ACCEPTED);
+////    }
+////
+////    @PostMapping("/mercadorias/registrar")
+////    public ResponseEntity<MercadoriaDTO> create(@Valid MercadoriaEntity mercadoriaEntity){
+////        return new ResponseEntity<>(registerMercadoria.registerMercadoria(mercadoriaEntity), HttpStatus.CREATED);
+////    }
+////
+////    @PutMapping("/{id}")
+////    public ResponseEntity<MercadoriaDTO> update(@PathVariable @Valid Long id, @Valid MercadoriaEntity mercadoriaEntity){
+////        return new ResponseEntity<>(estoqueService.update(id, mercadoriaEntity), HttpStatus.ACCEPTED);
+////    }
+//
+//    @DeleteMapping("/{id}")
+//    public ResponseEntity<Void> deleteMercadoriaById(@PathVariable @Valid Long id){
+//        boolean deleted = deleteByIdMercadoriaInteractor.deleteMercadoriaById(id);
+//        if (deleted){
+//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
 }

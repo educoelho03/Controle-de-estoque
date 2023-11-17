@@ -18,12 +18,12 @@ public class UpdateMercadoriaInteractor {
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
-    public MercadoriaDTO update(Long id, MercadoriaEntity mercadoriaEntity) throws RecordNotFoundException {
+    public MercadoriaDTO update(Long id, MercadoriaEntity mercadoria) throws RecordNotFoundException {
         return estoqueRepository.findById(id).map(
                 recordFound -> {
-                    recordFound.setName(mercadoriaEntity.getName());
-                    recordFound.setDescription(mercadoriaEntity.getDescription());
-                    recordFound.setType(mercadoriaEntity.getType());
+                    recordFound.setName(mercadoria.getName());
+                    recordFound.setDescription(mercadoria.getDescription());
+                    recordFound.setType(mercadoria.getType());
                     return estoqueRepository.save(recordFound);
                 }).map(mercadoriaEntityMapper::toDTO).orElseThrow(() -> new RecordNotFoundException(id));
     }
