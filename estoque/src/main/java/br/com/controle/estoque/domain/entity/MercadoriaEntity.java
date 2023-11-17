@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity(name = "mercadorias")
-@Table(name = "tb_mercadoria")
+@Table(name = "tb_estoque")
 @Getter
 @Setter
 public class MercadoriaEntity {
