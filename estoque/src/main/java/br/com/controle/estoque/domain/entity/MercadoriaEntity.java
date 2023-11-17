@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.hibernate.annotations.Formula;
 import org.hibernate.validator.constraints.Length;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity(name = "mercadorias")
@@ -34,7 +35,7 @@ public class MercadoriaEntity {
 
     @NotBlank
     @DecimalMin(value = "0.0", inclusive = false)
-    private Double price;
+    private BigDecimal price;
 
     @NotBlank
     @Min(value = 0)
@@ -48,7 +49,7 @@ public class MercadoriaEntity {
     @Enumerated(EnumType.STRING)
     private InOutEnum type;
 
-    public MercadoriaEntity(String name, LocalDate date, Double price, Integer amount, Double total, InOutEnum type, String description){
+    public MercadoriaEntity(String name, LocalDate date, BigDecimal price, Integer amount, Double total, InOutEnum type, String description){
         this.name = name;
         this.date = date;
         this.price = price;

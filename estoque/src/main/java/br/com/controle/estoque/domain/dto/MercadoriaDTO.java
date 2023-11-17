@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.validation.constraints.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -28,7 +29,7 @@ public record MercadoriaDTO(
         @JsonProperty("price")
         @NotNull(message = "Price is required")
         @DecimalMin(value = "0.0", message = "Price must be greater than 0.0")
-        Double price,
+        BigDecimal price,
 
         @JsonProperty("amount")
         @Min(value = 0, message = "Amount must be greater than or equal to 0")
