@@ -10,7 +10,6 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Getter
-@Entity
 @NoArgsConstructor(force = true)
 public record MercadoriaDTO(
         @JsonProperty("name")
