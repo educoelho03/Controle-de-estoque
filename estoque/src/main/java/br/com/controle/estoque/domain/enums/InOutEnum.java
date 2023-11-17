@@ -1,8 +1,8 @@
 package br.com.controle.estoque.domain.enums;
 
 public enum InOutEnum {
-    ENTER("Entrada"),
-    EXIT("Saida");
+    ENTER("E"),
+    EXIT("S");
 
     private final String value;
 

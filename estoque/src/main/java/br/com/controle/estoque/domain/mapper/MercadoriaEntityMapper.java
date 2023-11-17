@@ -11,10 +11,12 @@ public class MercadoriaEntityMapper {
     public MercadoriaEntity ToEntity(MercadoriaDTO mercadoriaDTO){
         return new MercadoriaEntity(
                 mercadoriaDTO.name(),
-                mercadoriaDTO.description(),
+                mercadoriaDTO.date(),
+                mercadoriaDTO.price(),
                 mercadoriaDTO.amount(),
+                mercadoriaDTO.total(),
                 mercadoriaDTO.type(),
-                mercadoriaDTO.stockPrice()
+                mercadoriaDTO.description()
         );
 
     }
@@ -22,10 +24,11 @@ public class MercadoriaEntityMapper {
     public MercadoriaDTO toDTO(MercadoriaEntity mercadoriaEntity){
         return new MercadoriaDTO(
                 mercadoriaEntity.getName(),
+                mercadoriaEntity.getDate(),
                 mercadoriaEntity.getDescription(),
+                mercadoriaEntity.getPrice(),
                 mercadoriaEntity.getAmount(),
-                mercadoriaEntity.getType(),
-                mercadoriaEntity.getStockPrice()
-        );
+                mercadoriaEntity.getTotal(),
+                mercadoriaEntity.getType());
     }
 }
