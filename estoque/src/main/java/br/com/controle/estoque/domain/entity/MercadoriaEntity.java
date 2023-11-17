@@ -2,15 +2,13 @@ package br.com.controle.estoque.domain.entity;
 
 import br.com.controle.estoque.domain.enums.InOutEnum;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Formula;
+import org.hibernate.validator.constraints.Length;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity(name = "mercadorias")
 @Table(name = "tb_mercadoria")
@@ -23,12 +21,15 @@ public class MercadoriaEntity {
     private Long id;
 
     @NotBlank
+    @PastOrPresent
     private LocalDate date;
 
     @NotBlank
+    @Size(max = 100)
     private String name; // Adicionar anotações de validação
 
     @NotBlank
+    @Length(max = 250)
     private String description;
 
     @NotBlank
@@ -41,7 +42,7 @@ public class MercadoriaEntity {
 
     @NotBlank
     @Formula("price * amount")
-    private Double total = price * amount;
+    private Double total;
 
     @NotBlank
     @Enumerated(EnumType.STRING)
