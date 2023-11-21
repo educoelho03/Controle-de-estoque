@@ -21,6 +21,7 @@ public class FindAllMercadoriaInteractor {
     }
 
 
+    // É uma boa pratica/recomendado usar ResponseEntity no useCases/service
     public ResponseEntity<List<MercadoriaDTO>> findAll(){
         List<MercadoriaDTO> mercadoriasDTO = estoqueRepository.findAll()
                 .stream()
