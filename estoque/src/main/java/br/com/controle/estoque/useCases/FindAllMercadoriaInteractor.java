@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+// TODO: REMOVER RESPONSEENTITY DOS SERVICE/USE CASES
+
 @Service
 public class FindAllMercadoriaInteractor {
 
