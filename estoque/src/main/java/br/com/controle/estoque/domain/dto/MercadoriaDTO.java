@@ -1,9 +1,7 @@
 package br.com.controle.estoque.domain.dto;
 
 import br.com.controle.estoque.domain.enums.InOutEnum;
-import com.fasterxml.jackson.annotation.JsonKey;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
 import jakarta.validation.constraints.*;
 import lombok.*;
 

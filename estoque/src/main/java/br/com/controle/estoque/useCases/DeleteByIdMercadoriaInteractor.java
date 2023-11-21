@@ -1,6 +1,5 @@
 package br.com.controle.estoque.useCases;
 
-import br.com.controle.estoque.domain.mapper.MercadoriaEntityMapper;
 import br.com.controle.estoque.repository.EstoqueRepository;
 import org.springframework.stereotype.Service;
 

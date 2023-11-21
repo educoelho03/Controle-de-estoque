@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Service
-// TODO: Preciso usar assinaturas? como SERVICE, REPOSITORY...
 public class FindByIdMercadoriaInteractor {
 
     private final EstoqueRepository estoqueRepository;
