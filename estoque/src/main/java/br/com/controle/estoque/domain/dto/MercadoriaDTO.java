@@ -33,7 +33,7 @@ public record MercadoriaDTO(
 
         @JsonProperty("amount")
         @Min(value = 0, message = "Amount must be greater than or equal to 0")
-        int amount,//quantidade
+        Integer amount,
 
         @JsonProperty("total")
         Double total,

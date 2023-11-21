@@ -3,6 +3,8 @@ package br.com.controle.estoque.useCases;
 import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.mapper.MercadoriaEntityMapper;
 import br.com.controle.estoque.repository.EstoqueRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +13,8 @@ import java.util.stream.Collectors;
 @Service
 public class FindAllMercadoriaInteractor {
 
-    private EstoqueRepository estoqueRepository;
-    private MercadoriaEntityMapper mercadoriaEntityMapper;
+    private final EstoqueRepository estoqueRepository;
+    private final MercadoriaEntityMapper mercadoriaEntityMapper;
 
     public FindAllMercadoriaInteractor(EstoqueRepository estoqueRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
         this.estoqueRepository = estoqueRepository;
@@ -20,10 +22,12 @@ public class FindAllMercadoriaInteractor {
     }
 
 
-    public List<MercadoriaDTO> findAll(){
-        return estoqueRepository.findAll()
+    public ResponseEntity<List<MercadoriaDTO>> findAll(){
+        List<MercadoriaDTO> mercadoriasDTO = estoqueRepository.findAll()
                 .stream()
                 .map(mercadoriaEntityMapper::toDTO)
-                .collect(Collectors.toList());
+                .toList();
+
+        return new ResponseEntity<>(mercadoriasDTO, HttpStatus.OK);
     }
 }

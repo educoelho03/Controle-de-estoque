@@ -5,22 +5,27 @@ import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.mapper.MercadoriaEntityMapper;
 import br.com.controle.estoque.repository.EstoqueRepository;
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RegisterMercadoriaInteractor {
 
-    private EstoqueRepository estoqueRepository;
-    private MercadoriaEntityMapper mercadoriaEntityMapper;
+    private final EstoqueRepository estoqueRepository;
+    private final MercadoriaEntityMapper mercadoriaEntityMapper;
 
     public RegisterMercadoriaInteractor(EstoqueRepository estoqueRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
         this.estoqueRepository = estoqueRepository;
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
-    public MercadoriaDTO registerMercadoria (@Valid MercadoriaEntity mercadoriaEntity){
-        return mercadoriaEntityMapper.toDTO(estoqueRepository.save(mercadoriaEntity));
-    }
 
+    public ResponseEntity<MercadoriaDTO> registerMercadoria(@Valid MercadoriaEntity mercadoria){
+        MercadoriaEntity saveMercadoria = estoqueRepository.save(mercadoria);
+        MercadoriaDTO mercadoriaDTO = mercadoriaEntityMapper.toDTO(saveMercadoria);
+
+        return new ResponseEntity<>(mercadoriaDTO, HttpStatus.CREATED);
+    }
 
 }

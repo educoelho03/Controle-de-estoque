@@ -6,7 +6,7 @@ public enum InOutEnum {
 
     private final String value;
 
-    private InOutEnum(String value){
+    InOutEnum(String value){
         this.value = value;
     }
 

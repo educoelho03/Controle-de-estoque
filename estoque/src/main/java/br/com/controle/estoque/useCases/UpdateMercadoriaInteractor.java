@@ -5,7 +5,11 @@ import br.com.controle.estoque.domain.entity.MercadoriaEntity;
 import br.com.controle.estoque.domain.mapper.MercadoriaEntityMapper;
 import br.com.controle.estoque.exceptionHandler.RecordNotFoundException;
 import br.com.controle.estoque.repository.EstoqueRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UpdateMercadoriaInteractor {
@@ -18,13 +22,16 @@ public class UpdateMercadoriaInteractor {
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
-    public MercadoriaDTO update(Long id, MercadoriaEntity mercadoria) throws RecordNotFoundException {
-        return estoqueRepository.findById(id).map(
-                recordFound -> {
+    public ResponseEntity<MercadoriaDTO> update(Long id, MercadoriaEntity mercadoria) {
+        return estoqueRepository.findById(id)
+                .map(recordFound -> {
                     recordFound.setName(mercadoria.getName());
                     recordFound.setDescription(mercadoria.getDescription());
                     recordFound.setType(mercadoria.getType());
-                    return estoqueRepository.save(recordFound);
-                }).map(mercadoriaEntityMapper::toDTO).orElseThrow(() -> new RecordNotFoundException(id));
+                    estoqueRepository.save(recordFound);
+                    MercadoriaDTO updatedMercadoriaDTO = mercadoriaEntityMapper.toDTO(recordFound);
+                    return ResponseEntity.ok(updatedMercadoriaDTO);
+                })
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
     }
 }
