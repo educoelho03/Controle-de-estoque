@@ -1,4 +1,4 @@
-package br.com.controle.estoque.exceptionHandler;
+package br.com.controle.estoque.exception;
 
 public class RecordNotFoundException extends RuntimeException{
     public RecordNotFoundException(String message) {

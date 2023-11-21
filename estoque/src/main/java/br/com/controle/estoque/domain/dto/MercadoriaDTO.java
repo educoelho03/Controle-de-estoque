@@ -3,13 +3,10 @@ package br.com.controle.estoque.domain.dto;
 import br.com.controle.estoque.domain.enums.InOutEnum;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
-import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Getter
-@NoArgsConstructor(force = true)
 public record MercadoriaDTO(
         @JsonProperty("name")
         @NotBlank(message = "Name is required")
@@ -25,7 +22,6 @@ public record MercadoriaDTO(
         String description,
 
         @JsonProperty("price")
-        @NotNull(message = "Price is required")
         @DecimalMin(value = "0.0", message = "Price must be greater than 0.0")
         BigDecimal price,
 
