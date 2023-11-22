@@ -11,13 +11,13 @@ public class MercadoriaEntityMapper {
     // TODO: Conferir uso do Builder
     public MercadoriaEntity ToEntity(MercadoriaDTO mercadoriaDTO){
         return new MercadoriaEntity.Builder()
-                .withName(mercadoriaDTO.name())
-                .withDate(mercadoriaDTO.date())
-                .withPrice(mercadoriaDTO.price())
-                .withAmount(mercadoriaDTO.amount())
-                .withTotal(mercadoriaDTO.total())
-                .withType(mercadoriaDTO.type())
-                .withDescription(mercadoriaDTO.description()).build();
+                .name(mercadoriaDTO.name())
+                .date(mercadoriaDTO.date())
+                .price(mercadoriaDTO.price())
+                .amount(mercadoriaDTO.amount())
+                .total(mercadoriaDTO.total())
+                .type(mercadoriaDTO.type())
+                .description(mercadoriaDTO.description()).build();
     }
 
     public MercadoriaDTO toDTO(MercadoriaEntity mercadoriaEntity){

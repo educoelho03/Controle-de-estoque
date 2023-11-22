@@ -65,37 +65,37 @@ public class MercadoriaEntity {
     public static class Builder {
         private MercadoriaEntity mercadoria = new MercadoriaEntity();
 
-        public Builder withName(String name) {
+        public Builder name(String name) {
             mercadoria.name = name;
             return this;
         }
 
-        public Builder withDate(LocalDate date) {
+        public Builder date(LocalDate date) {
             mercadoria.date = date;
             return this;
         }
 
-        public Builder withPrice(BigDecimal price) {
+        public Builder price(BigDecimal price) {
             mercadoria.price = price;
             return this;
         }
 
-        public Builder withAmount(int amount) {
+        public Builder amount(int amount) {
             mercadoria.amount = amount;
             return this;
         }
 
-        public Builder withTotal(Double total) {
+        public Builder total(Double total) {
             mercadoria.total = total;
             return this;
         }
 
-        public Builder withType(InOutEnum type) {
+        public Builder type(InOutEnum type) {
             mercadoria.type = type;
             return this;
         }
 
-        public Builder withDescription(String description) {
+        public Builder description(String description) {
             mercadoria.description = description;
             return this;
         }
