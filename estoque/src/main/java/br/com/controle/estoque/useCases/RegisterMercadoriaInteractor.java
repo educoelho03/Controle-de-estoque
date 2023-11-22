@@ -21,11 +21,9 @@ public class RegisterMercadoriaInteractor {
     }
 
 
-    public ResponseEntity<MercadoriaDTO> registerMercadoria(@Valid MercadoriaEntity mercadoria){
+    public MercadoriaDTO registerMercadoria(MercadoriaEntity mercadoria){
         MercadoriaEntity saveMercadoria = estoqueRepository.save(mercadoria);
-        MercadoriaDTO mercadoriaDTO = mercadoriaEntityMapper.toDTO(saveMercadoria);
 
-        return new ResponseEntity<>(mercadoriaDTO, HttpStatus.CREATED);
+        return mercadoriaEntityMapper.toDTO(saveMercadoria);
     }
-
 }

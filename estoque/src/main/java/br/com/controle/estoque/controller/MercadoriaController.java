@@ -32,25 +32,25 @@ public class MercadoriaController {
 
     @PutMapping("/update")
     public MercadoriaDTO atualizar(@PathVariable @Valid Long id, @RequestBody MercadoriaEntity mercadoria){
-        MercadoriaDTO mercadoriaDTO = updateMercadoria.update(id, mercadoria).getBody();
+        MercadoriaDTO mercadoriaDTO = updateMercadoria.update(id, mercadoria);
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK).getBody();
     }
 
     @PostMapping("/register")
     public ResponseEntity<MercadoriaDTO> registrar(@RequestBody MercadoriaEntity mercadoria){
-        MercadoriaDTO mercadoriaDTO = registrarMercadoria.registerMercadoria(mercadoria).getBody();
+        MercadoriaDTO mercadoriaDTO = registrarMercadoria.registerMercadoria(mercadoria);
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<MercadoriaDTO> findById(@PathVariable @Valid Long id){
-        MercadoriaDTO mercadoriaDTO = findByIdMercadoria.findMercadoriaById(id).getBody();
+        MercadoriaDTO mercadoriaDTO = findByIdMercadoria.findMercadoriaById(id);
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK);
     }
 
     @GetMapping("/")
     public ResponseEntity<List<MercadoriaDTO>> findAll(){
-        List<MercadoriaDTO> mercadoriaDTO = findAllMercadoria.findAll().getBody();
+        List<MercadoriaDTO> mercadoriaDTO = findAllMercadoria.findAll();
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK);
     }
 

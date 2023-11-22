@@ -19,16 +19,15 @@ public class UpdateMercadoriaInteractor {
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
-    public ResponseEntity<MercadoriaDTO> update(Long id, MercadoriaEntity mercadoria) {
+    public MercadoriaDTO update(Long id, MercadoriaEntity mercadoria) {
         return estoqueRepository.findById(id)
                 .map(recordFound -> {
                     recordFound.setName(mercadoria.getName());
                     recordFound.setDescription(mercadoria.getDescription());
                     recordFound.setType(mercadoria.getType());
                     estoqueRepository.save(recordFound);
-                    MercadoriaDTO updatedMercadoriaDTO = mercadoriaEntityMapper.toDTO(recordFound);
-                    return ResponseEntity.ok(updatedMercadoriaDTO);
+                    return mercadoriaEntityMapper.toDTO(recordFound);
                 })
-                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
+                .orElse(null); // or throw a specific exception if needed
     }
 }

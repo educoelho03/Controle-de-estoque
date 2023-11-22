@@ -20,13 +20,21 @@ public class FindByIdMercadoriaInteractor {
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
-    public ResponseEntity<MercadoriaDTO> findMercadoriaById(@PathVariable Long id){
-        try {
-            return ResponseEntity.ok(estoqueRepository.findById(id)
-                    .map(mercadoriaEntityMapper::toDTO)
-                    .orElseThrow(() -> new RecordNotFoundException("Record nao encontrado. " + id)));
-        } catch (RecordNotFoundException e){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
+//    public ResponseEntity<MercadoriaDTO> findMercadoriaById(@PathVariable Long id){
+//        try {
+//            return ResponseEntity.ok(estoqueRepository.findById(id)
+//                    .map(mercadoriaEntityMapper::toDTO)
+//                    .orElseThrow(() -> new RecordNotFoundException("Record nao encontrado. " + id)));
+//        } catch (RecordNotFoundException e){
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+//        }
+//    }
+
+
+    public MercadoriaDTO findMercadoriaById(Long id){
+
+        MercadoriaDTO mercadoriaDTO = estoqueRepository.findById(id).map(mercadoriaEntityMapper::toDTO)
+                    .orElseThrow( () -> new RecordNotFoundException("Record nao encontrado. " + id));
+        return mercadoriaDTO;
     }
 }
