@@ -14,7 +14,6 @@ import java.time.LocalDate;
 @Entity(name = "mercadorias")
 @Table(name = "tb_estoque")
 @Getter
-@Setter
 public class MercadoriaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -55,37 +54,37 @@ public class MercadoriaEntity {
     public static class Builder {
         private final MercadoriaEntity mercadoria = new MercadoriaEntity();
 
-        public Builder name(String name) {
+        public Builder withName(String name) {
             mercadoria.name = name;
             return this;
         }
 
-        public Builder date(LocalDate date) {
+        public Builder withDate(LocalDate date) {
             mercadoria.date = date;
             return this;
         }
 
-        public Builder price(BigDecimal price) {
+        public Builder withPrice(BigDecimal price) {
             mercadoria.price = price;
             return this;
         }
 
-        public Builder amount(int amount) {
+        public Builder withAmount(int amount) {
             mercadoria.amount = amount;
             return this;
         }
 
-        public Builder total(Double total) {
+        public Builder withTotal(Double total) {
             mercadoria.total = total;
             return this;
         }
 
-        public Builder type(InOutEnum type) {
+        public Builder withType(InOutEnum type) {
             mercadoria.type = type;
             return this;
         }
 
-        public Builder description(String description) {
+        public Builder withDescription(String description) {
             mercadoria.description = description;
             return this;
         }
