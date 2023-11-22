@@ -23,13 +23,11 @@ public class FindAllMercadoriaInteractor {
     }
 
 
-    // É uma boa pratica/recomendado usar ResponseEntity no useCases/service
     public List<MercadoriaDTO> findAll(){
-        List<MercadoriaDTO> mercadoriasDTO = estoqueRepository.findAll()
+
+        return estoqueRepository.findAll()
                 .stream()
                 .map(mercadoriaEntityMapper::toDTO)
                 .toList();
-
-        return mercadoriasDTO;
     }
 }
