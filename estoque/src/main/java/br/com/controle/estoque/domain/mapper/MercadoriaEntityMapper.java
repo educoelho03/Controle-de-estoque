@@ -15,7 +15,6 @@ public class MercadoriaEntityMapper {
                 .withDate(mercadoriaDTO.date())
                 .withPrice(mercadoriaDTO.price())
                 .withAmount(mercadoriaDTO.amount())
-                .withTotal(mercadoriaDTO.total())
                 .withType(mercadoriaDTO.type())
                 .withDescription(mercadoriaDTO.description()).build();
     }

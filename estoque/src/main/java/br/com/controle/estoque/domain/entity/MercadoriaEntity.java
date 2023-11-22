@@ -46,9 +46,18 @@ public class MercadoriaEntity {
     @Enumerated(EnumType.STRING)
     private InOutEnum type;
 
-    private MercadoriaEntity(){
+    public MercadoriaEntity(String name, LocalDate date, String description, BigDecimal price, Integer amount, Double total, InOutEnum type) {
+        this.name = name;
+        this.date = date;
+        this.description = description;
+        this.price = price;
+        this.amount = amount;
+        this.total = total;
+        this.type = type;
     }
 
+    private MercadoriaEntity(){
+    }
 
 
     public static class Builder {
@@ -74,11 +83,6 @@ public class MercadoriaEntity {
             return this;
         }
 
-        public Builder withTotal(Double total) {
-            mercadoria.total = total;
-            return this;
-        }
-
         public Builder withType(InOutEnum type) {
             mercadoria.type = type;
             return this;
@@ -90,6 +94,7 @@ public class MercadoriaEntity {
         }
 
         public MercadoriaEntity build() {
+            mercadoria.total = mercadoria.price.doubleValue() * mercadoria.amount;
             return mercadoria;
         }
     }
