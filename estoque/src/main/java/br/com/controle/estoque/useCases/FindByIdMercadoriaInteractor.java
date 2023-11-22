@@ -22,9 +22,7 @@ public class FindByIdMercadoriaInteractor {
 
 
     public MercadoriaDTO findMercadoriaById(Long id){
-
-        MercadoriaDTO mercadoriaDTO = estoqueRepository.findById(id).map(mercadoriaEntityMapper::toDTO)
+        return estoqueRepository.findById(id).map(mercadoriaEntityMapper::toDTO)
                     .orElseThrow( () -> new RecordNotFoundException("Record nao encontrado. " + id));
-        return mercadoriaDTO;
     }
 }

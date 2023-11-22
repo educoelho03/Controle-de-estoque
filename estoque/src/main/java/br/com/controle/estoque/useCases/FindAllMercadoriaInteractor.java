@@ -24,7 +24,6 @@ public class FindAllMercadoriaInteractor {
 
 
     public List<MercadoriaDTO> findAll(){
-
         return estoqueRepository.findAll()
                 .stream()
                 .map(mercadoriaEntityMapper::toDTO)
