@@ -41,7 +41,6 @@ public class MercadoriaEntity {
     @Min(value = 0)
     private Integer amount; //quantidade
 
-    @NotBlank
     @Formula("price * amount")
     private Double total;
 
@@ -59,12 +58,50 @@ public class MercadoriaEntity {
         this.description = description;
     }
 
-//    public Mercadoria(MercadoriaDTO mercadoriaDTO){
-//        this.name = mercadoriaDTO.getName();
-//        this.description = mercadoriaDTO.getDescription();
-//        this.amount = mercadoriaDTO.getAmount();
-//        this.type = mercadoriaDTO.getType();
-//        this.stockPrice = mercadoriaDTO.getStockPrice();
-//    }
+    private MercadoriaEntity(){
 
+    }
+
+    public static class Builder {
+        private MercadoriaEntity mercadoria = new MercadoriaEntity();
+
+        public Builder withName(String name) {
+            mercadoria.name = name;
+            return this;
+        }
+
+        public Builder withDate(LocalDate date) {
+            mercadoria.date = date;
+            return this;
+        }
+
+        public Builder withPrice(BigDecimal price) {
+            mercadoria.price = price;
+            return this;
+        }
+
+        public Builder withAmount(int amount) {
+            mercadoria.amount = amount;
+            return this;
+        }
+
+        public Builder withTotal(Double total) {
+            mercadoria.total = total;
+            return this;
+        }
+
+        public Builder withType(InOutEnum type) {
+            mercadoria.type = type;
+            return this;
+        }
+
+        public Builder withDescription(String description) {
+            mercadoria.description = description;
+            return this;
+        }
+
+        public MercadoriaEntity build() {
+            return mercadoria;
+        }
+    }
 }

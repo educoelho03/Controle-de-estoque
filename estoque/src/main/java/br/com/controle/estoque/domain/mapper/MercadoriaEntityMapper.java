@@ -8,17 +8,16 @@ import org.springframework.stereotype.Component;
 // TODO: USAR A DEPENDENCIA MODELMAPPER?
 public class MercadoriaEntityMapper {
 
+    // TODO: Conferir uso do Builder
     public MercadoriaEntity ToEntity(MercadoriaDTO mercadoriaDTO){
-        return new MercadoriaEntity(
-                mercadoriaDTO.name(),
-                mercadoriaDTO.date(),
-                mercadoriaDTO.price(),
-                mercadoriaDTO.amount(),
-                mercadoriaDTO.total(),
-                mercadoriaDTO.type(),
-                mercadoriaDTO.description()
-        );
-
+        return new MercadoriaEntity.Builder()
+                .withName(mercadoriaDTO.name())
+                .withDate(mercadoriaDTO.date())
+                .withPrice(mercadoriaDTO.price())
+                .withAmount(mercadoriaDTO.amount())
+                .withTotal(mercadoriaDTO.total())
+                .withType(mercadoriaDTO.type())
+                .withDescription(mercadoriaDTO.description()).build();
     }
 
     public MercadoriaDTO toDTO(MercadoriaEntity mercadoriaEntity){
