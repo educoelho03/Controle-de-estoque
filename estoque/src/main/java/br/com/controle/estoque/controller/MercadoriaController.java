@@ -30,7 +30,7 @@ public class MercadoriaController {
         this.updateMercadoria = updateMercadoria;
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     public MercadoriaDTO atualizar(@PathVariable @Valid Long id, @RequestBody MercadoriaEntity mercadoria){
         MercadoriaDTO mercadoriaDTO = updateMercadoria.update(id, mercadoria);
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK).getBody();
@@ -54,7 +54,7 @@ public class MercadoriaController {
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteMercadoriaById(@PathVariable @Valid Long id){
         boolean deleted = deleteByIdMercadoria.deleteMercadoriaById(id);
         if (deleted){

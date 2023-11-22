@@ -24,7 +24,6 @@ public class MercadoriaEntity {
     @Size(max = 100)
     private String name; // Adicionar anotações de validação
 
-    @NotBlank
     @PastOrPresent
     private LocalDate date;
 
@@ -32,18 +31,15 @@ public class MercadoriaEntity {
     @Length(max = 250)
     private String description;
 
-    @NotBlank
     @DecimalMin(value = "0.0", inclusive = false)
     private BigDecimal price;
 
-    @NotBlank
     @Min(value = 0)
     private Integer amount; //quantidade
 
     @Formula("price * amount")
     private Double total;
 
-    @NotBlank
     @Enumerated(EnumType.STRING)
     private InOutEnum type;
 

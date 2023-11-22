@@ -1,6 +1,7 @@
 package br.com.controle.estoque.domain.dto;
 
 import br.com.controle.estoque.domain.enums.InOutEnum;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
 
@@ -13,6 +14,7 @@ public record MercadoriaDTO(
         String name,
 
         @JsonProperty("date")
+        @JsonFormat(pattern = "dd/MM/yyyy")
         @NotNull(message = "Date is required")
         @PastOrPresent
         LocalDate date,
