@@ -16,7 +16,6 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class MercadoriaEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -48,22 +47,13 @@ public class MercadoriaEntity {
     @Enumerated(EnumType.STRING)
     private InOutEnum type;
 
-    public MercadoriaEntity(String name, LocalDate date, BigDecimal price, Integer amount, Double total, InOutEnum type, String description){
-        this.name = name;
-        this.date = date;
-        this.price = price;
-        this.amount = amount;
-        this.total = total;
-        this.type = type;
-        this.description = description;
-    }
-
     private MercadoriaEntity(){
-
     }
+
+
 
     public static class Builder {
-        private MercadoriaEntity mercadoria = new MercadoriaEntity();
+        private final MercadoriaEntity mercadoria = new MercadoriaEntity();
 
         public Builder name(String name) {
             mercadoria.name = name;
