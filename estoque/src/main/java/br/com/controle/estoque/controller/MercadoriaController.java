@@ -64,7 +64,7 @@ public class MercadoriaController {
         return ResponseEntity.status(status).body(deleted);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/verificaEstoque/{id}")
     public ResponseEntity<Boolean> verificarAlertarEstoque(@PathVariable @Valid Long id) {
         boolean mercadoriaExiste = alertaEstoqueBaixo.alertaEstoque(id);
 

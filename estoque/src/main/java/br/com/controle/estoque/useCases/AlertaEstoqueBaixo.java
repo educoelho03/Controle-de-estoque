@@ -6,10 +6,11 @@ import br.com.controle.estoque.domain.mapper.MercadoriaEntityMapper;
 import br.com.controle.estoque.repository.EstoqueRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
 
-
+@Service
 public class AlertaEstoqueBaixo {
 
     private final EstoqueRepository estoqueRepository;
@@ -33,6 +34,7 @@ public class AlertaEstoqueBaixo {
             logger.warn("ALERTA!! - Estoque Baixo para a mercadoria com ID: " + id + ". Quantidade atual: " + mercadoria.getAmount());
             return true;
         }
+        logger.info("Estoque alto para a mercadoria com ID: " + id + ". Quantidade atual: " + mercadoria.getAmount());
         return false;
     }
 

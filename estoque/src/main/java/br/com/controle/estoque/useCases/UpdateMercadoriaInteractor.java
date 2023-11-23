@@ -27,6 +27,8 @@ public class UpdateMercadoriaInteractor {
                     recordFound.setName(mercadoria.getName());
                     recordFound.setDescription(mercadoria.getDescription());
                     recordFound.setType(mercadoria.getType());
+                    recordFound.setPrice(mercadoria.getPrice());
+                    recordFound.setAmount(mercadoria.getAmount());
                     estoqueRepository.save(recordFound);
                     logger.info("Mercadoria Atualizada com sucesso, alterações realizadas: " + recordFound);
                     return mercadoriaEntityMapper.toDTO(recordFound);
