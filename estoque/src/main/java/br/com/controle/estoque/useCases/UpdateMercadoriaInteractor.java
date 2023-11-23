@@ -4,6 +4,8 @@ import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.entity.MercadoriaEntity;
 import br.com.controle.estoque.domain.mapper.MercadoriaEntityMapper;
 import br.com.controle.estoque.repository.EstoqueRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,6 +13,8 @@ public class UpdateMercadoriaInteractor {
 
     private final EstoqueRepository estoqueRepository;
     private final MercadoriaEntityMapper mercadoriaEntityMapper;
+    private static final Logger logger = LoggerFactory.getLogger(UpdateMercadoriaInteractor.class);
+
 
     public UpdateMercadoriaInteractor(EstoqueRepository estoqueRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
         this.estoqueRepository = estoqueRepository;
@@ -24,6 +28,7 @@ public class UpdateMercadoriaInteractor {
                     recordFound.setDescription(mercadoria.getDescription());
                     recordFound.setType(mercadoria.getType());
                     estoqueRepository.save(recordFound);
+                    logger.info("Mercadoria Atualizada com sucesso, alterações realizadas: " + recordFound);
                     return mercadoriaEntityMapper.toDTO(recordFound);
                 })
                 .orElseThrow();
