@@ -22,7 +22,7 @@ public class AlertaEstoqueBaixo {
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
 
-    public void alertaEstoque(Long id){
+    public boolean alertaEstoque(Long id){
         MercadoriaDTO mercadoriaDTO = estoqueRepository.findById(id)
                 .map(mercadoriaEntityMapper::toDTO)
                 .orElseThrow(() -> new NoSuchElementException("Mercadoria não encontrada"));
@@ -31,7 +31,9 @@ public class AlertaEstoqueBaixo {
 
         if(mercadoriaDTO.amount() < 10){
             logger.warn("ALERTA!! - Estoque Baixo para a mercadoria com ID: " + id + ". Quantidade atual: " + mercadoria.getAmount());
+            return true;
         }
+        return false;
     }
 
 

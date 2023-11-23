@@ -19,15 +19,17 @@ public class MercadoriaController {
     private final FindByIdMercadoriaInteractor findByIdMercadoria;
     private final RegisterMercadoriaInteractor registrarMercadoria;
     private final UpdateMercadoriaInteractor updateMercadoria;
+    private final AlertaEstoqueBaixo alertaEstoqueBaixo;
 
     public MercadoriaController(DeleteByIdMercadoriaInteractor deleteByIdMercadoria, FindAllMercadoriaInteractor findAllMercadoria,
                                 FindByIdMercadoriaInteractor findByIdMercadoria, RegisterMercadoriaInteractor registrarMercadoria,
-                                UpdateMercadoriaInteractor updateMercadoria) {
+                                UpdateMercadoriaInteractor updateMercadoria, AlertaEstoqueBaixo alertaEstoqueBaixo) {
         this.deleteByIdMercadoria = deleteByIdMercadoria;
         this.findAllMercadoria = findAllMercadoria;
         this.findByIdMercadoria = findByIdMercadoria;
         this.registrarMercadoria = registrarMercadoria;
         this.updateMercadoria = updateMercadoria;
+        this.alertaEstoqueBaixo = alertaEstoqueBaixo;
     }
 
     @PutMapping("/update/{id}")
@@ -55,12 +57,18 @@ public class MercadoriaController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteMercadoriaById(@PathVariable @Valid Long id){
+    public ResponseEntity<Boolean> deleteMercadoriaById(@PathVariable @Valid Long id){
         boolean deleted = deleteByIdMercadoria.deleteMercadoriaById(id);
-        if (deleted){
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+
+        HttpStatus status = deleted ? HttpStatus.OK : HttpStatus.NOT_FOUND;
+        return ResponseEntity.status(status).body(deleted);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Boolean> verificarAlertarEstoque(@PathVariable @Valid Long id) {
+        boolean mercadoriaExiste = alertaEstoqueBaixo.alertaEstoque(id);
+
+        HttpStatus status = mercadoriaExiste ? HttpStatus.OK : HttpStatus.NOT_FOUND;
+        return ResponseEntity.status(status).body(mercadoriaExiste);
     }
 }
