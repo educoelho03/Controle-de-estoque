@@ -15,6 +15,7 @@ import java.time.LocalDate;
 @Table(name = "tb_estoque")
 @Setter
 @Getter
+//TODO: ADICIONAR O FORNECEDOR DE TAL MERCADORIA
 public class MercadoriaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
