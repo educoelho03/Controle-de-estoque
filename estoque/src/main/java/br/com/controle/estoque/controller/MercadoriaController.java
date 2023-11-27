@@ -38,7 +38,7 @@ public class MercadoriaController {
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK).getBody();
     }
 
-    @PostMapping("/register")
+    @PostMapping("/cadastrar")
     public ResponseEntity<MercadoriaDTO> registrar(@RequestBody MercadoriaEntity mercadoria){
         MercadoriaDTO mercadoriaDTO = registrarMercadoria.registerMercadoria(mercadoria);
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.CREATED);
