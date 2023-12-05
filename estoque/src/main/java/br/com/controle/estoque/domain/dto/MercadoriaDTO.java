@@ -24,16 +24,20 @@ public record MercadoriaDTO(
         String description,
 
         @JsonProperty("price")
+        @NotNull
         @DecimalMin(value = "0.0", message = "Price must be greater than 0.0")
         BigDecimal price,
 
         @JsonProperty("amount")
+        @NotNull
         @Min(value = 0, message = "Amount must be greater than or equal to 0")
         Integer amount,
 
+        @NotNull
         @JsonProperty("total")
         Double total,
 
         @JsonProperty("type")
+        @NotNull
         InOutEnum type
         ) {}

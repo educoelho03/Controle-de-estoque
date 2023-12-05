@@ -17,6 +17,7 @@ public record FornecedorDTO(
         @NotBlank
         String cnpj,
 
+        @NotBlank
         @JsonProperty("telefone")
         String telefone) {
 

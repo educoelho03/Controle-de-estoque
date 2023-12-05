@@ -25,7 +25,7 @@ public class DeleteByIdMercadoriaInteractor {
                 return true;
             }
         } catch (Exception e) {
-            throw new RecordNotFoundException("Record não encontrado. " + id);
+            throw new RecordNotFoundException("Id não encontrado. " + id);
         }
         return false;
     }
