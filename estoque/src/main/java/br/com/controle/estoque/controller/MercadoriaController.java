@@ -3,6 +3,7 @@ package br.com.controle.estoque.controller;
 import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.entity.MercadoriaEntity;
 import br.com.controle.estoque.useCases.*;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,30 +34,35 @@ public class MercadoriaController {
     }
 
     @PutMapping("/update/{id}")
+    @Operation(summary = "Atualizar", description = "Método que atualiza todas as mercadorias com um ID", tags = "Mercadoria")
     public MercadoriaDTO atualizar(@PathVariable @Valid Long id, @RequestBody MercadoriaEntity mercadoria){
         MercadoriaDTO mercadoriaDTO = updateMercadoria.update(id, mercadoria);
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK).getBody();
     }
 
     @PostMapping("/cadastrar")
+    @Operation(summary = "Cadastrar", description = "Método que atualiza todas as mercadorias com um ID", tags = "Mercadoria")
     public ResponseEntity<MercadoriaDTO> registrar(@RequestBody MercadoriaEntity mercadoria){
         MercadoriaDTO mercadoriaDTO = registrarMercadoria.registerMercadoria(mercadoria);
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Buscar por ID", description = "Método que atualiza todas as mercadorias com um ID", tags = "Mercadoria")
     public ResponseEntity<MercadoriaDTO> findById(@PathVariable @Valid Long id){
         MercadoriaDTO mercadoriaDTO = findByIdMercadoria.findMercadoriaById(id);
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK);
     }
 
     @GetMapping("/")
+    @Operation(summary = "Listar", description = "Método que atualiza todas as mercadorias com um ID", tags = "Mercadoria")
     public ResponseEntity<List<MercadoriaDTO>> findAll(){
         List<MercadoriaDTO> mercadoriaDTO = findAllMercadoria.findAll();
         return new ResponseEntity<>(mercadoriaDTO, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
+    @Operation(summary = "Deletar", description = "Método que atualiza todas as mercadorias com um ID", tags = "Mercadoria")
     public ResponseEntity<Boolean> deleteMercadoriaById(@PathVariable @Valid Long id){
         boolean deleted = deleteByIdMercadoria.deleteMercadoriaById(id);
 
@@ -65,6 +71,7 @@ public class MercadoriaController {
     }
 
     @GetMapping("/verificaEstoque/{id}")
+    @Operation(summary = "Verifica Estoque", description = "Método que atualiza todas as mercadorias com um ID", tags = "Mercadoria")
     public ResponseEntity<Boolean> verificarAlertarEstoque(@PathVariable @Valid Long id) {
         boolean mercadoriaExiste = alertaEstoqueBaixo.alertaEstoque(id);
 

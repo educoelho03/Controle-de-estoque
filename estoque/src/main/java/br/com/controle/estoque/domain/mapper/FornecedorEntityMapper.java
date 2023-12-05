@@ -1,10 +1,10 @@
 package br.com.controle.estoque.domain.mapper;
 
 import br.com.controle.estoque.domain.dto.FornecedorDTO;
-import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.entity.FornecedorEntity;
-import br.com.controle.estoque.domain.entity.MercadoriaEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FornecedorEntityMapper {
 
     public FornecedorEntity ToEntity(FornecedorDTO fornecedorDTO){

@@ -387,3 +387,312 @@ java.util.NoSuchElementException: Mercadoria não encontrada
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
 	at java.lang.Thread.run(Thread.java:1623) [?:?]
+2023-11-27T14:37:34,355 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T12:47:52,529 - INFO  | org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-05T12:47:52,577 - INFO  | br.com.controle.estoque.EstoqueApplication - Starting EstoqueApplication using Java 20.0.1 with PID 14664 (C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes started by ecoelho in C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque)
+2023-12-05T12:47:52,582 - DEBUG | br.com.controle.estoque.EstoqueApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-12-05T12:47:52,585 - INFO  | br.com.controle.estoque.EstoqueApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-05T12:47:52,729 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-05T12:47:52,730 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-05T12:47:53,721 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-05T12:47:53,798 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2023-12-05T12:47:54,628 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-12-05T12:47:54,641 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-05T12:47:54,644 - INFO  | org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-05T12:47:54,645 - INFO  | org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-05T12:47:54,726 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-05T12:47:54,728 - INFO  | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1996 ms
+2023-12-05T12:47:54,772 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-05T12:47:55,009 - INFO  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-12-05T12:47:55,011 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-05T12:47:55,023 - INFO  | org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-12-05T12:47:55,182 - INFO  | org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-05T12:47:55,264 - INFO  | org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-05T12:47:55,269 - INFO  | org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-12-05T12:47:55,550 - INFO  | org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-05T12:47:55,597 - WARN  | org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-05T12:47:56,565 - INFO  | org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-05T12:47:56,608 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T12:47:56,624 - WARN  | org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fornecedorController' defined in file [C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes\br\com\controle\estoque\controller\FornecedorController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'registerFornecedorInteractor' defined in file [C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes\br\com\controle\estoque\useCases\RegisterFornecedorInteractor.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'br.com.controle.estoque.domain.mapper.FornecedorEntityMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-12-05T12:47:56,625 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T12:47:56,634 - WARN  | org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2023-12-05T12:47:56,634 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-05T12:47:56,637 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-12-05T12:47:56,639 - INFO  | org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2023-12-05T12:47:56,661 - INFO  | org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-05T12:47:56,732 - ERROR | org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in br.com.controle.estoque.useCases.RegisterFornecedorInteractor required a bean of type 'br.com.controle.estoque.domain.mapper.FornecedorEntityMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'br.com.controle.estoque.domain.mapper.FornecedorEntityMapper' in your configuration.
+
+2023-12-05T12:48:27,939 - INFO  | org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-05T12:48:27,997 - INFO  | br.com.controle.estoque.EstoqueApplication - Starting EstoqueApplication using Java 20.0.1 with PID 12736 (C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes started by ecoelho in C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque)
+2023-12-05T12:48:28,006 - DEBUG | br.com.controle.estoque.EstoqueApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-12-05T12:48:28,007 - INFO  | br.com.controle.estoque.EstoqueApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-05T12:48:28,119 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-05T12:48:28,120 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-05T12:48:29,054 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-05T12:48:29,131 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2023-12-05T12:48:29,934 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-12-05T12:48:29,944 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-05T12:48:29,947 - INFO  | org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-05T12:48:29,948 - INFO  | org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-05T12:48:30,033 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-05T12:48:30,035 - INFO  | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1912 ms
+2023-12-05T12:48:30,065 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-05T12:48:30,293 - INFO  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-12-05T12:48:30,295 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-05T12:48:30,306 - INFO  | org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-12-05T12:48:30,446 - INFO  | org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-05T12:48:30,568 - INFO  | org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-05T12:48:30,570 - INFO  | org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-12-05T12:48:30,867 - INFO  | org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-05T12:48:30,913 - WARN  | org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-05T12:48:31,863 - INFO  | org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-05T12:48:31,903 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T12:48:32,248 - WARN  | org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-05T12:48:32,568 - INFO  | org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-05T12:48:32,579 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-05T12:48:32,604 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-05T12:48:32,614 - INFO  | br.com.controle.estoque.EstoqueApplication - Started EstoqueApplication in 5.149 seconds (process running for 6.185)
+2023-12-05T12:48:32,617 - INFO  | br.com.controle.estoque.EstoqueApplication - API de Controle de Estoque inciada e pronta para receber requisições!!!
+2023-12-05T12:49:31,727 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05T12:49:31,727 - INFO  | org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-05T12:49:31,728 - INFO  | org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-12-05T13:07:53,731 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T13:07:53,739 - WARN  | org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2023-12-05T13:07:53,739 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-05T13:07:53,742 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-12-05T13:08:05,020 - INFO  | org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-05T13:08:05,080 - INFO  | br.com.controle.estoque.EstoqueApplication - Starting EstoqueApplication using Java 20.0.1 with PID 12584 (C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes started by ecoelho in C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque)
+2023-12-05T13:08:05,086 - DEBUG | br.com.controle.estoque.EstoqueApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-12-05T13:08:05,087 - INFO  | br.com.controle.estoque.EstoqueApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-05T13:08:05,226 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-05T13:08:05,227 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-05T13:08:06,472 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-05T13:08:06,593 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
+2023-12-05T13:08:07,812 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-12-05T13:08:07,824 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-05T13:08:07,827 - INFO  | org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-05T13:08:07,828 - INFO  | org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-05T13:08:07,942 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-05T13:08:07,945 - INFO  | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2715 ms
+2023-12-05T13:08:07,999 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-05T13:08:08,258 - INFO  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-12-05T13:08:08,261 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-05T13:08:08,277 - INFO  | org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-12-05T13:08:09,096 - INFO  | org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-05T13:08:09,152 - INFO  | org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-05T13:08:09,154 - INFO  | org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-12-05T13:08:09,462 - INFO  | org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-05T13:08:09,510 - WARN  | org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-05T13:08:10,395 - INFO  | org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-05T13:08:10,437 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T13:08:10,792 - WARN  | org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-05T13:08:11,145 - INFO  | org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-05T13:08:11,155 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-05T13:08:11,192 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-05T13:08:11,201 - INFO  | br.com.controle.estoque.EstoqueApplication - Started EstoqueApplication in 6.678 seconds (process running for 7.925)
+2023-12-05T13:08:11,204 - INFO  | br.com.controle.estoque.EstoqueApplication - API de Controle de Estoque inciada e pronta para receber requisições!!!
+2023-12-05T13:09:25,106 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05T13:09:25,107 - INFO  | org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-05T13:09:25,110 - INFO  | org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-12-05T13:19:26,699 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T13:19:26,711 - WARN  | org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2023-12-05T13:19:26,712 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-05T13:19:26,714 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-12-05T13:20:11,097 - INFO  | org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-05T13:20:11,158 - INFO  | br.com.controle.estoque.EstoqueApplication - Starting EstoqueApplication using Java 20.0.1 with PID 15040 (C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes started by ecoelho in C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque)
+2023-12-05T13:20:11,171 - DEBUG | br.com.controle.estoque.EstoqueApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-12-05T13:20:11,171 - INFO  | br.com.controle.estoque.EstoqueApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-05T13:20:11,295 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-05T13:20:11,296 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-05T13:20:13,074 - ERROR | org.springframework.boot.SpringApplication - Application run failed
+java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[?:?]
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[?:?]
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[?:?]
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[?:?]
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[?:?]
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[?:?]
+	at sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[?:?]
+	at sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[?:?]
+	at java.lang.Class.getGenericInterfaces(Class.java:1251) ~[?:?]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:503) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:451) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.core.ResolvableType.forClass(ResolvableType.java:1063) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.getTargetType(PluginRegistriesBeanDefinitionRegistrar.java:101) ~[spring-plugin-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.registerBeanDefinitions(PluginRegistriesBeanDefinitionRegistrar.java:71) ~[spring-plugin-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:372) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[?:?]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:371) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:427) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:779) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) [spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) [spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.5.jar:3.1.5]
+	at br.com.controle.estoque.EstoqueApplication.main(EstoqueApplication.java:17) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:496) ~[?:?]
+	at java.lang.Class.forName(Class.java:475) ~[?:?]
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[?:?]
+	... 35 more
+2023-12-05T13:20:44,519 - INFO  | org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-05T13:20:44,541 - INFO  | br.com.controle.estoque.EstoqueApplication - Starting EstoqueApplication using Java 20.0.1 with PID 17404 (C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes started by ecoelho in C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque)
+2023-12-05T13:20:44,549 - DEBUG | br.com.controle.estoque.EstoqueApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-12-05T13:20:44,550 - INFO  | br.com.controle.estoque.EstoqueApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-05T13:20:44,685 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-05T13:20:44,686 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-05T13:20:46,600 - ERROR | org.springframework.boot.SpringApplication - Application run failed
+java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[?:?]
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[?:?]
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[?:?]
+	at sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[?:?]
+	at sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[?:?]
+	at sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[?:?]
+	at sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[?:?]
+	at sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[?:?]
+	at java.lang.Class.getGenericInterfaces(Class.java:1251) ~[?:?]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:503) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:451) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.core.ResolvableType.forClass(ResolvableType.java:1063) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.getTargetType(PluginRegistriesBeanDefinitionRegistrar.java:101) ~[spring-plugin-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.registerBeanDefinitions(PluginRegistriesBeanDefinitionRegistrar.java:71) ~[spring-plugin-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:372) ~[spring-context-6.0.13.jar:6.0.13]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:729) ~[?:?]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:371) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:427) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:287) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:779) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) [spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) [spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.5.jar:3.1.5]
+	at br.com.controle.estoque.EstoqueApplication.main(EstoqueApplication.java:17) [classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) [spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:496) ~[?:?]
+	at java.lang.Class.forName(Class.java:475) ~[?:?]
+	at sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[?:?]
+	... 35 more
+2023-12-05T13:22:27,705 - INFO  | org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-05T13:22:27,756 - INFO  | br.com.controle.estoque.EstoqueApplication - Starting EstoqueApplication using Java 20.0.1 with PID 15732 (C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes started by ecoelho in C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque)
+2023-12-05T13:22:27,761 - DEBUG | br.com.controle.estoque.EstoqueApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-12-05T13:22:27,764 - INFO  | br.com.controle.estoque.EstoqueApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-05T13:22:27,922 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-05T13:22:27,922 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-05T13:22:28,998 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-05T13:22:29,087 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+2023-12-05T13:22:29,967 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-12-05T13:22:29,982 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-05T13:22:29,987 - INFO  | org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-05T13:22:29,988 - INFO  | org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-05T13:22:30,201 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-05T13:22:30,203 - INFO  | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2277 ms
+2023-12-05T13:22:30,260 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-05T13:22:30,574 - INFO  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-12-05T13:22:30,577 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-05T13:22:30,591 - INFO  | org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-12-05T13:22:30,877 - INFO  | org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-05T13:22:30,952 - INFO  | org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-05T13:22:30,954 - INFO  | org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-12-05T13:22:31,319 - INFO  | org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-05T13:22:31,372 - WARN  | org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-05T13:22:32,221 - INFO  | org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-05T13:22:32,260 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T13:22:32,694 - WARN  | org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-05T13:22:33,219 - INFO  | org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-05T13:22:33,279 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-05T13:22:33,305 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-05T13:22:33,314 - INFO  | br.com.controle.estoque.EstoqueApplication - Started EstoqueApplication in 6.077 seconds (process running for 7.121)
+2023-12-05T13:22:33,317 - INFO  | br.com.controle.estoque.EstoqueApplication - API de Controle de Estoque inciada e pronta para receber requisições!!!
+2023-12-05T13:22:37,052 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05T13:22:37,052 - INFO  | org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-05T13:22:37,053 - INFO  | org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-12-05T13:22:38,323 - INFO  | org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 487 ms
+2023-12-05T13:24:30,678 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T13:24:30,685 - WARN  | org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2023-12-05T13:24:30,686 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-05T13:24:30,688 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-12-05T13:24:37,464 - INFO  | org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-05T13:24:37,544 - INFO  | br.com.controle.estoque.EstoqueApplication - Starting EstoqueApplication using Java 20.0.1 with PID 2584 (C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes started by ecoelho in C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque)
+2023-12-05T13:24:37,549 - DEBUG | br.com.controle.estoque.EstoqueApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-12-05T13:24:37,550 - INFO  | br.com.controle.estoque.EstoqueApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-05T13:24:37,645 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-05T13:24:37,645 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-05T13:24:38,987 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-05T13:24:39,064 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2023-12-05T13:24:39,881 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-12-05T13:24:39,899 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-05T13:24:39,902 - INFO  | org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-05T13:24:39,903 - INFO  | org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-05T13:24:39,989 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-05T13:24:39,991 - INFO  | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2343 ms
+2023-12-05T13:24:40,027 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-05T13:24:40,288 - INFO  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-12-05T13:24:40,295 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-05T13:24:40,312 - INFO  | org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-12-05T13:24:40,525 - INFO  | org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-05T13:24:40,593 - INFO  | org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-05T13:24:40,596 - INFO  | org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-12-05T13:24:40,898 - INFO  | org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-05T13:24:40,940 - WARN  | org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-05T13:24:41,763 - INFO  | org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-05T13:24:41,800 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T13:24:42,232 - WARN  | org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-05T13:24:42,636 - INFO  | org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-05T13:24:42,647 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-05T13:24:42,673 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-05T13:24:42,683 - INFO  | br.com.controle.estoque.EstoqueApplication - Started EstoqueApplication in 5.717 seconds (process running for 6.95)
+2023-12-05T13:24:42,686 - INFO  | br.com.controle.estoque.EstoqueApplication - API de Controle de Estoque inciada e pronta para receber requisições!!!
+2023-12-05T13:24:45,657 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05T13:24:45,657 - INFO  | org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-05T13:24:45,658 - INFO  | org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-12-05T13:24:46,399 - INFO  | org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 444 ms
+2023-12-05T13:24:58,883 - WARN  | org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `br.com.controle.estoque.domain.enums.InOutEnum` from String "E": not one of the values accepted for Enum class: [ENTER, EXIT]]
+2023-12-05T13:25:11,837 - WARN  | org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `br.com.controle.estoque.domain.enums.InOutEnum` from String "E": not one of the values accepted for Enum class: [ENTER, EXIT]]
+2023-12-05T13:27:14,123 - INFO  | br.com.controle.estoque.useCases.RegisterMercadoriaInteractor - Mercadoria registrada com sucesso.
