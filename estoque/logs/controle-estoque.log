@@ -134,14 +134,14 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x16
 2023-11-27T12:45:57,604 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-11-27T12:45:57,605 - INFO  | org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2023-11-27T12:45:57,607 - INFO  | org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2023-11-27T12:49:20,061 - INFO  | br.com.controle.estoque.useCases.FindAllMercadoriaInteractor - Lista de mercadorias em estoque. 
-2023-11-27T12:52:13,834 - INFO  | br.com.controle.estoque.useCases.FindAllMercadoriaInteractor - Lista de mercadorias em estoque. 
-2023-11-27T12:59:10,024 - INFO  | br.com.controle.estoque.useCases.FindAllMercadoriaInteractor - Lista de mercadorias em estoque. 
+2023-11-27T12:49:20,061 - INFO  | br.com.controle.estoque.useCases.mercadoriaImp.FindAllMercadoriaInteractor - Lista de mercadorias em estoque.
+2023-11-27T12:52:13,834 - INFO  | br.com.controle.estoque.useCases.mercadoriaImp.FindAllMercadoriaInteractor - Lista de mercadorias em estoque.
+2023-11-27T12:59:10,024 - INFO  | br.com.controle.estoque.useCases.mercadoriaImp.FindAllMercadoriaInteractor - Lista de mercadorias em estoque.
 2023-11-27T12:59:16,616 - ERROR | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.NoSuchElementException: Mercadoria não encontrada] with root cause
 java.util.NoSuchElementException: Mercadoria não encontrada
-	at br.com.controle.estoque.useCases.AlertaEstoqueBaixo.lambda$alertaEstoque$0(AlertaEstoqueBaixo.java:29) ~[classes/:?]
+	at br.com.controle.estoque.useCases.mercadoriaImp.AlertaEstoqueBaixo.lambda$alertaEstoque$0(AlertaEstoqueBaixo.java:29) ~[classes/:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
-	at br.com.controle.estoque.useCases.AlertaEstoqueBaixo.alertaEstoque(AlertaEstoqueBaixo.java:29) ~[classes/:?]
+	at br.com.controle.estoque.useCases.mercadoriaImp.AlertaEstoqueBaixo.alertaEstoque(AlertaEstoqueBaixo.java:29) ~[classes/:?]
 	at br.com.controle.estoque.controller.MercadoriaController.verificarAlertarEstoque(MercadoriaController.java:69) ~[classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
@@ -282,12 +282,12 @@ This generated password is for development use only. Your security configuration
 2023-11-27T13:05:19,332 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-11-27T13:05:19,332 - INFO  | org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2023-11-27T13:05:19,333 - INFO  | org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2023-11-27T13:05:41,757 - INFO  | br.com.controle.estoque.useCases.FindAllMercadoriaInteractor - Lista de mercadorias em estoque. 
+2023-11-27T13:05:41,757 - INFO  | br.com.controle.estoque.useCases.mercadoriaImp.FindAllMercadoriaInteractor - Lista de mercadorias em estoque.
 2023-11-27T13:05:49,175 - ERROR | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.NoSuchElementException: Mercadoria não encontrada] with root cause
 java.util.NoSuchElementException: Mercadoria não encontrada
-	at br.com.controle.estoque.useCases.AlertaEstoqueBaixo.lambda$alertaEstoque$0(AlertaEstoqueBaixo.java:29) ~[classes/:?]
+	at br.com.controle.estoque.useCases.mercadoriaImp.AlertaEstoqueBaixo.lambda$alertaEstoque$0(AlertaEstoqueBaixo.java:29) ~[classes/:?]
 	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
-	at br.com.controle.estoque.useCases.AlertaEstoqueBaixo.alertaEstoque(AlertaEstoqueBaixo.java:29) ~[classes/:?]
+	at br.com.controle.estoque.useCases.mercadoriaImp.AlertaEstoqueBaixo.alertaEstoque(AlertaEstoqueBaixo.java:29) ~[classes/:?]
 	at br.com.controle.estoque.controller.MercadoriaController.verificarAlertarEstoque(MercadoriaController.java:69) ~[classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
@@ -430,7 +430,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in br.com.controle.estoque.useCases.RegisterFornecedorInteractor required a bean of type 'br.com.controle.estoque.domain.mapper.FornecedorEntityMapper' that could not be found.
+Parameter 0 of constructor in br.com.controle.estoque.useCases.fornecedorImp.RegisterFornecedorInteractor required a bean of type 'br.com.controle.estoque.domain.mapper.FornecedorEntityMapper' that could not be found.
 
 
 Action:
@@ -695,7 +695,7 @@ Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletReque
 2023-12-05T13:24:46,399 - INFO  | org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 444 ms
 2023-12-05T13:24:58,883 - WARN  | org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `br.com.controle.estoque.domain.enums.InOutEnum` from String "E": not one of the values accepted for Enum class: [ENTER, EXIT]]
 2023-12-05T13:25:11,837 - WARN  | org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `br.com.controle.estoque.domain.enums.InOutEnum` from String "E": not one of the values accepted for Enum class: [ENTER, EXIT]]
-2023-12-05T13:27:14,123 - INFO  | br.com.controle.estoque.useCases.RegisterMercadoriaInteractor - Mercadoria registrada com sucesso.
+2023-12-05T13:27:14,123 - INFO  | br.com.controle.estoque.useCases.mercadoriaImp.RegisterMercadoriaInteractor - Mercadoria registrada com sucesso.
 2023-12-05T13:39:24,755 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-12-05T13:39:24,764 - WARN  | org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 2023-12-05T13:39:24,765 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
@@ -859,7 +859,7 @@ select m1_0.id,m1_0.amount,m1_0.date,m1_0.description,m1_0.name,m1_0.price,m1_0.
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244) ~[spring-aop-6.0.13.jar:6.0.13]
 	at jdk.proxy4.$Proxy148.findById(Unknown Source) ~[?:?]
-	at br.com.controle.estoque.useCases.DeleteByIdMercadoriaInteractor.deleteMercadoriaById(DeleteByIdMercadoriaInteractor.java:22) ~[classes/:?]
+	at br.com.controle.estoque.useCases.mercadoriaImp.DeleteByIdMercadoriaInteractor.deleteMercadoriaById(DeleteByIdMercadoriaInteractor.java:22) ~[classes/:?]
 	at br.com.controle.estoque.controller.MercadoriaController.deleteMercadoriaById(MercadoriaController.java:67) ~[classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
@@ -944,7 +944,7 @@ select m1_0.id,m1_0.amount,m1_0.date,m1_0.description,m1_0.name,m1_0.price,m1_0.
 	... 122 more
 2023-12-05T15:39:04,917 - ERROR | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: br.com.controle.estoque.exception.RecordNotFoundException: Record não encontrado. 1] with root cause
 br.com.controle.estoque.exception.RecordNotFoundException: Record não encontrado. 1
-	at br.com.controle.estoque.useCases.DeleteByIdMercadoriaInteractor.deleteMercadoriaById(DeleteByIdMercadoriaInteractor.java:28) ~[classes/:?]
+	at br.com.controle.estoque.useCases.mercadoriaImp.DeleteByIdMercadoriaInteractor.deleteMercadoriaById(DeleteByIdMercadoriaInteractor.java:28) ~[classes/:?]
 	at br.com.controle.estoque.controller.MercadoriaController.deleteMercadoriaById(MercadoriaController.java:67) ~[classes/:?]
 	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
@@ -1071,7 +1071,10 @@ br.com.controle.estoque.exception.RecordNotFoundException: Record não encontrad
 2023-12-05T17:13:05,605 - INFO  | org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2023-12-05T17:13:05,606 - INFO  | org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
 2023-12-05T17:13:06,247 - INFO  | org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 426 ms
-2023-12-05T17:13:59,277 - INFO  | br.com.controle.estoque.useCases.FindAllMercadoriaInteractor - Fornecedor registrado com sucesso.
+2023-12-05T17:13:59,277 - INFO  | br.com.controle.estoque.useCases.mercadoriaImp.FindAllMercadoriaInteractor - Fornecedor registrado com sucesso.
 2023-12-05T17:14:11,515 - WARN  | org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `br.com.controle.estoque.domain.enums.Estados` from String "AM": not one of the values accepted for Enum class: [BAHIA, AMAPA, SANTA_CATARINA, SAO_PAULO, RIO_GRANDE_DO_NORTE, CEARA, TOCANTINS, ALAGOAS, GOIAS, RIO_GRANDE_DO_SUL, DISTRITO_FEDERAL, SERGIPE, MATO_GROSSO_DO_SUL, MATO_GROSSO, PERNAMBUCO, PARA, PARAIBA, RONDONIA, MARANHAO, RORAIMA, MINAS_GERAIS, AMAZONAS, PIAUI, RIO_DE_JANEIRO, PARANA, ACRE, ESPIRITO_SANTO]]
-2023-12-05T17:14:24,115 - INFO  | br.com.controle.estoque.useCases.FindAllMercadoriaInteractor - Fornecedor registrado com sucesso.
-2023-12-05T17:14:37,875 - INFO  | br.com.controle.estoque.useCases.FindAllMercadoriaInteractor - Lista de mercadorias em estoque. 
+2023-12-05T17:14:24,115 - INFO  | br.com.controle.estoque.useCases.mercadoriaImp.FindAllMercadoriaInteractor - Fornecedor registrado com sucesso.
+2023-12-05T17:14:37,875 - INFO  | br.com.controle.estoque.useCases.mercadoriaImp.FindAllMercadoriaInteractor - Lista de mercadorias em estoque.
+2023-12-05T19:29:12,963 - WARN  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m44s289ms262µs700ns).
+2023-12-05T19:40:34,997 - WARN  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m22s31ms888µs300ns).
+2023-12-06T12:01:02,444 - WARN  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16h18m27s454ms429µs300ns).

@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 // todo: implementar a rota de gateway
-public interface EstoqueMercadoriaRepository extends JpaRepository<MercadoriaEntity, Long> {
+public interface MercadoriaRepository extends JpaRepository<MercadoriaEntity, Long> {
 }

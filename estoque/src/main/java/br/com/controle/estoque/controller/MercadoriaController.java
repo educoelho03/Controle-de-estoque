@@ -2,7 +2,7 @@ package br.com.controle.estoque.controller;
 
 import br.com.controle.estoque.domain.dto.MercadoriaDTO;
 import br.com.controle.estoque.domain.entity.MercadoriaEntity;
-import br.com.controle.estoque.useCases.*;
+import br.com.controle.estoque.useCases.mercadoriaImp.*;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

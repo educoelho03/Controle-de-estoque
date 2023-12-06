@@ -1,12 +1,12 @@
-package br.com.controle.estoque.useCases;
+package br.com.controle.estoque.useCases.fornecedorImp;
 
 import br.com.controle.estoque.domain.dto.FornecedorDTO;
 import br.com.controle.estoque.domain.entity.FornecedorEntity;
 import br.com.controle.estoque.domain.mapper.FornecedorEntityMapper;
 import br.com.controle.estoque.repository.FornecedorRepository;
+import br.com.controle.estoque.useCases.mercadoriaImp.FindAllMercadoriaInteractor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
