@@ -39,18 +39,18 @@ public class MercadoriaEntity {
     private Integer amount; //quantidade
 
     @Formula("price * amount")
-    private Double total;
+    private Double priceTotal;
 
     @Enumerated(EnumType.STRING)
     private InOutEnum type;
 
-    public MercadoriaEntity(String name, LocalDate date, String description, BigDecimal price, Integer amount, Double total, InOutEnum type) {
+    public MercadoriaEntity(String name, LocalDate date, String description, BigDecimal price, Integer amount, Double priceTotal, InOutEnum type) {
         this.name = name;
         this.date = date;
         this.description = description;
         this.price = price;
         this.amount = amount;
-        this.total = total;
+        this.priceTotal = priceTotal;
         this.type = type;
     }
 
@@ -92,7 +92,7 @@ public class MercadoriaEntity {
         }
 
         public MercadoriaEntity build() {
-            mercadoria.total = mercadoria.price.doubleValue() * mercadoria.amount;
+            mercadoria.priceTotal = mercadoria.price.doubleValue() * mercadoria.amount;
             return mercadoria;
         }
     }

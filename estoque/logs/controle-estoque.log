@@ -1410,3 +1410,7 @@ br.com.controle.estoque.exception.RecordNotFoundException: Record não encontrad
 2023-12-06T14:36:49,166 - INFO  | org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 578 ms
 2023-12-06T15:32:29,774 - WARN  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m59s544ms276µs700ns).
 2023-12-06T15:35:50,926 - WARN  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s144ms910µs600ns).
+2023-12-06T18:20:02,820 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-06T18:20:02,847 - WARN  | org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2023-12-06T18:20:02,848 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-06T18:20:02,850 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

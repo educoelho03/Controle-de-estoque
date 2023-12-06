@@ -2,6 +2,7 @@ package br.com.controle.estoque.controller;
 
 import br.com.controle.estoque.domain.dto.FornecedorDTO;
 import br.com.controle.estoque.domain.entity.FornecedorEntity;
+import br.com.controle.estoque.useCases.fornecedorImp.DeleteFornecedorInteractor;
 import br.com.controle.estoque.useCases.fornecedorImp.FindAllFornecedorInteractor;
 import br.com.controle.estoque.useCases.fornecedorImp.FindFornecedorByIdInteractor;
 import br.com.controle.estoque.useCases.fornecedorImp.RegisterFornecedorInteractor;
@@ -20,13 +21,15 @@ public class FornecedorController {
     private final RegisterFornecedorInteractor registerFornecedor;
     private final FindAllFornecedorInteractor findAllFornecedor;
     private final FindFornecedorByIdInteractor findFornecedorById;
+    private final DeleteFornecedorInteractor deleteFornecedor;
 
 
     public FornecedorController(RegisterFornecedorInteractor registerFornecedor, FindAllFornecedorInteractor findAllFornecedor,
-                                FindFornecedorByIdInteractor findByIdMercadoria) {
+                                FindFornecedorByIdInteractor findByIdMercadoria, DeleteFornecedorInteractor deleteFornecedor) {
         this.registerFornecedor = registerFornecedor;
         this.findAllFornecedor = findAllFornecedor;
         this.findFornecedorById = findByIdMercadoria;
+        this.deleteFornecedor = deleteFornecedor;
     }
 
     @PostMapping("/cadastrar")
@@ -48,5 +51,12 @@ public class FornecedorController {
     public ResponseEntity<FornecedorDTO> listarPorId(@PathVariable Long id){
         FornecedorDTO listaFornecedorPorId = findFornecedorById.listaPorId(id);
         return new ResponseEntity<>(listaFornecedorPorId, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/del/{id}")
+    @Operation(summary = "Remover por ID", description = "Método que remove o fornecedor por ID", tags = "Fornecedor")
+    public ResponseEntity<Boolean> removerPorId(@PathVariable Long id){
+        boolean removido = deleteFornecedor.remover(id);
+        return new ResponseEntity<>(removido, HttpStatus.OK);
     }
 }
