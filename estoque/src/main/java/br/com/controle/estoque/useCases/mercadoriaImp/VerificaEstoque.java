@@ -11,14 +11,14 @@ import org.springframework.stereotype.Service;
 import java.util.NoSuchElementException;
 
 @Service
-public class AlertaEstoqueBaixo {
+public class VerificaEstoque {
 
     private final MercadoriaRepository mercadoriaRepository;
     private final MercadoriaEntityMapper mercadoriaEntityMapper;
-    private static final Logger logger = LoggerFactory.getLogger(AlertaEstoqueBaixo.class);
+    private static final Logger logger = LoggerFactory.getLogger(VerificaEstoque.class);
 
 
-    public AlertaEstoqueBaixo(MercadoriaRepository mercadoriaRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
+    public VerificaEstoque(MercadoriaRepository mercadoriaRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
         this.mercadoriaRepository = mercadoriaRepository;
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
     }
@@ -32,9 +32,10 @@ public class AlertaEstoqueBaixo {
 
         if(mercadoriaDTO.amount() < 10){
             logger.warn("ALERTA!! - Estoque Baixo para a mercadoria com ID: " + id + ". Quantidade atual: " + mercadoria.getAmount());
+            logger.info("SOLICITAR REPOSIÇÃO DE ESTOQUE PARA A MERCADORIA " + mercadoria.getName() + ". id: " + id);
             return true;
         }
-        logger.info("Estoque alto para a mercadoria com ID: " + id + ". Quantidade atual: " + mercadoria.getAmount());
+        logger.info("Estoque atual: " + mercadoria.getAmount() + " unidades.");
         return false;
     }
 

@@ -20,17 +20,17 @@ public class MercadoriaController {
     private final FindByIdMercadoriaInteractor findByIdMercadoria;
     private final RegisterMercadoriaInteractor registrarMercadoria;
     private final UpdateMercadoriaInteractor updateMercadoria;
-    private final AlertaEstoqueBaixo alertaEstoqueBaixo;
+    private final VerificaEstoque verificaEstoque;
 
     public MercadoriaController(DeleteByIdMercadoriaInteractor deleteByIdMercadoria, FindAllMercadoriaInteractor findAllMercadoria,
                                 FindByIdMercadoriaInteractor findByIdMercadoria, RegisterMercadoriaInteractor registrarMercadoria,
-                                UpdateMercadoriaInteractor updateMercadoria, AlertaEstoqueBaixo alertaEstoqueBaixo) {
+                                UpdateMercadoriaInteractor updateMercadoria, VerificaEstoque verificaEstoque) {
         this.deleteByIdMercadoria = deleteByIdMercadoria;
         this.findAllMercadoria = findAllMercadoria;
         this.findByIdMercadoria = findByIdMercadoria;
         this.registrarMercadoria = registrarMercadoria;
         this.updateMercadoria = updateMercadoria;
-        this.alertaEstoqueBaixo = alertaEstoqueBaixo;
+        this.verificaEstoque = verificaEstoque;
     }
 
     @PutMapping("/update/{id}")
@@ -73,7 +73,7 @@ public class MercadoriaController {
     @GetMapping("/verificaEstoque/{id}")
     @Operation(summary = "Verifica Estoque", description = "Método que atualiza todas as mercadorias com um ID", tags = "Mercadoria")
     public ResponseEntity<Boolean> verificarAlertarEstoque(@PathVariable @Valid Long id) {
-        boolean mercadoriaExiste = alertaEstoqueBaixo.alertaEstoque(id);
+        boolean mercadoriaExiste = verificaEstoque.alertaEstoque(id);
 
         HttpStatus status = mercadoriaExiste ? HttpStatus.OK : HttpStatus.NOT_FOUND;
         return ResponseEntity.status(status).body(mercadoriaExiste);

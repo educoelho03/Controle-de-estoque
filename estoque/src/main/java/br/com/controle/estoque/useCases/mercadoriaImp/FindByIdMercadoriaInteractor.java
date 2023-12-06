@@ -13,17 +13,20 @@ public class FindByIdMercadoriaInteractor {
 
     private final MercadoriaRepository mercadoriaRepository;
     private final MercadoriaEntityMapper mercadoriaEntityMapper;
+    private final VerificaEstoque verificaEstoque;
     private static final Logger logger = LoggerFactory.getLogger(FindByIdMercadoriaInteractor.class);
 
 
-    public FindByIdMercadoriaInteractor(MercadoriaRepository mercadoriaRepository, MercadoriaEntityMapper mercadoriaEntityMapper) {
+    public FindByIdMercadoriaInteractor(MercadoriaRepository mercadoriaRepository, MercadoriaEntityMapper mercadoriaEntityMapper, VerificaEstoque verificaEstoque) {
         this.mercadoriaRepository = mercadoriaRepository;
         this.mercadoriaEntityMapper = mercadoriaEntityMapper;
+        this.verificaEstoque = verificaEstoque;
     }
 
 
     public MercadoriaDTO findMercadoriaById(Long id){
         logger.info("Mercadoria com id " + id + " encontrada com sucesso.");
+        verificaEstoque.alertaEstoque(id);
         return mercadoriaRepository.findById(id).map(mercadoriaEntityMapper::toDTO)
                     .orElseThrow( () -> new RecordNotFoundException("Record nao encontrado. " + id));
     }

@@ -25,7 +25,7 @@ public class FindAllFornecedorInteractor {
     }
 
     public List<FornecedorDTO> listar(){
-        logger.info("Lista de Fornecedores. ");
+        logger.info("Lista de Fornecedores retornada com sucesso. ");
         return fornecedorRepository.findAll()
                 .stream()
                 .map(fornecedorEntityMapper::toDTO).toList();
