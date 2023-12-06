@@ -21,7 +21,7 @@ public class FindFornecedorByIdInteractor {
 
     public FornecedorDTO listaPorId(Long id){
         return fornecedorRepository.findById(id).map(fornecedorEntityMapper::toDTO)
-                .orElseThrow(() -> new RecordNotFoundException("Id nao encontrado. " + id));
+                .orElseThrow(() -> new RecordNotFoundException("Fornecedor não encontrado. " + id));
 
     }
 }

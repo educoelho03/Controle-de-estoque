@@ -14,10 +14,10 @@ public record FornecedorDTO(
         Estados estados,
 
         @JsonProperty("cnpj")
-        @NotBlank
+        @NotBlank(message = "cnpj is required")
         String cnpj,
 
-        @NotBlank
+        @NotBlank(message = "telefone is required")
         @JsonProperty("telefone")
         String telefone) {
 
