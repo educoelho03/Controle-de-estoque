@@ -1488,3 +1488,42 @@ br.com.controle.estoque.exception.RecordNotFoundException: Record não encontrad
 2023-12-07T18:19:10,853 - WARN  | org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 2023-12-07T18:19:10,854 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-12-07T18:19:10,864 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-12-07T18:19:57,824 - INFO  | org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-12-07T18:19:57,867 - INFO  | br.com.controle.estoque.EstoqueApplication - Starting EstoqueApplication using Java 20.0.1 with PID 5544 (C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque\estoque\target\classes started by ecoelho in C:\Users\ecoelho\OneDrive - Constancia Investimentos\Desktop\estoque)
+2023-12-07T18:19:57,871 - DEBUG | br.com.controle.estoque.EstoqueApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-12-07T18:19:57,872 - INFO  | br.com.controle.estoque.EstoqueApplication - No active profile set, falling back to 1 default profile: "default"
+2023-12-07T18:19:57,969 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-07T18:19:57,969 - INFO  | org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-07T18:19:59,153 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-07T18:19:59,227 - INFO  | org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2023-12-07T18:19:59,998 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-12-07T18:20:00,009 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-12-07T18:20:00,012 - INFO  | org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-12-07T18:20:00,013 - INFO  | org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-07T18:20:00,106 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-12-07T18:20:00,108 - INFO  | org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2136 ms
+2023-12-07T18:20:00,154 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-12-07T18:20:00,395 - INFO  | com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-12-07T18:20:00,397 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-12-07T18:20:00,410 - INFO  | org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2'. Database available at 'jdbc:h2:mem:testdb'
+2023-12-07T18:20:00,561 - INFO  | org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-07T18:20:00,636 - INFO  | org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-07T18:20:00,639 - INFO  | org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-12-07T18:20:00,941 - INFO  | org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-07T18:20:00,985 - WARN  | org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-07T18:20:01,886 - INFO  | org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-07T18:20:01,923 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07T18:20:02,484 - WARN  | org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-07T18:20:03,235 - INFO  | org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-12-07T18:20:03,255 - INFO  | org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-12-07T18:20:03,304 - INFO  | org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-07T18:20:03,319 - INFO  | br.com.controle.estoque.EstoqueApplication - Started EstoqueApplication in 6.003 seconds (process running for 7.196)
+2023-12-07T18:20:03,323 - INFO  | br.com.controle.estoque.EstoqueApplication - API de Controle de Estoque inciada e pronta para receber requisições!!!
+2023-12-07T18:20:13,747 - INFO  | org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-07T18:20:13,748 - INFO  | org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-12-07T18:20:13,749 - INFO  | org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-12-07T18:20:14,688 - INFO  | org.springdoc.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 422 ms
+2023-12-07T18:25:22,152 - INFO  | org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-07T18:25:22,161 - WARN  | org.springframework.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2023-12-07T18:25:22,164 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-12-07T18:25:22,166 - INFO  | com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -20,6 +20,7 @@ public class FornecedorEntity {
     private String name;
 
     @Enumerated(EnumType.STRING)
+    @NotBlank
     private Estados sede;
 
     @NotBlank
