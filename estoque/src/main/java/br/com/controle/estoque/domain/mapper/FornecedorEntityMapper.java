@@ -10,7 +10,7 @@ public class FornecedorEntityMapper {
     public FornecedorEntity ToEntity(FornecedorDTO fornecedorDTO){
         return new FornecedorEntity.Builder()
                 .withName(fornecedorDTO.name())
-                .withStates(fornecedorDTO.estados())
+                .withSede(fornecedorDTO.estados())
                 .withCnpj(fornecedorDTO.cnpj())
                 .withtelefone(fornecedorDTO.telefone())
                 .build();
@@ -19,7 +19,7 @@ public class FornecedorEntityMapper {
     public FornecedorDTO toDTO(FornecedorEntity fornecedorEntity){
         return new FornecedorDTO(
                 fornecedorEntity.getName(),
-                fornecedorEntity.getEstados(),
+                fornecedorEntity.getSede(),
                 fornecedorEntity.getCnpj(),
                 fornecedorEntity.getTelefone());
     }

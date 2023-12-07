@@ -20,7 +20,7 @@ public class FornecedorEntity {
     private String name;
 
     @Enumerated(EnumType.STRING)
-    private Estados estados;
+    private Estados sede;
 
     @NotBlank
     private String cnpj;
@@ -28,9 +28,9 @@ public class FornecedorEntity {
     @NotBlank
     private String telefone;
 
-    public FornecedorEntity(String name, Estados estados, String cnpj, String telefone) {
+    public FornecedorEntity(String name, Estados sede, String cnpj, String telefone) {
         this.name = name;
-        this.estados = estados;
+        this.sede = sede;
         this.cnpj = cnpj;
         this.telefone = telefone;
     }
@@ -46,8 +46,8 @@ public class FornecedorEntity {
             return this;
         }
 
-        public FornecedorEntity.Builder withStates(Estados estados) {
-            fornecedor.estados = estados;
+        public FornecedorEntity.Builder withSede(Estados sede) {
+            fornecedor.sede = sede;
             return this;
         }
 
